@@ -216,6 +216,22 @@ const formattedDate = pubDate.toLocaleDateString('es-ES', { year: 'numeric', mon
         padding: 0;
         font-size: 0.875rem;
       }
+      /* INLINE IMAGES */
+      .content img {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        margin: 1.5rem 0;
+        display: block;
+      }
+      .content img + em {
+        display: block;
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        margin-top: -1rem;
+        margin-bottom: 1.5rem;
+      }
       /* FOOTER */
       footer {
         border-top: 1px solid var(--border);

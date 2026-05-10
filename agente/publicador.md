@@ -75,35 +75,35 @@ author: "Editor"
 
 ---
 
-## PASO 3.5 — Generar imagen con Canva
+## PASO 3.5 — Generar imágenes con Canva (3 imágenes por post)
 
-Usa la herramienta `mcp__canva__generate-design` para crear una imagen de cabecera para el post.
+Genera 3 imágenes para el post usando `mcp__canva__generate-design`. Para cada una:
+1. Llama a `generate-design`
+2. Toma el primer candidato (`candidate_id` y `job_id`)
+3. Llama a `create-design-from-candidate` para obtener el `design_id`
+4. Llama a `export-design` con `format.type: jpg`, `format.width: 1200`, `format.height: 630`, `format.quality: 85`
+5. Descarga con `curl -L "[URL]" -o "public/images/[nombre].jpg"`
 
-- `design_type`: `poster`
+Parámetros comunes:
 - `brand_kit_id`: `kAFUsXX6fQI`
-- `query`: "Blog header image for INDUC TECH article about [tema del post]. Professional electrical engineering company. Technical, industrial style. Include the article title: [título]. Dark blue and white colors. Clean and professional."
+- `design_type`: `poster`
 
-Toma el primer candidato del resultado (`candidate_id` y `job_id`).
+**IMAGEN 1 — Hero/cabecera:**
+- `query`: "Professional blog header for INDUCTECH TRAINING article: [título]. Electrical engineering, industrial style, dark blue background, technical diagrams or electrical equipment. Bold title text. Clean and authoritative."
+- Guarda como: `public/images/[slug].jpg`
+- Añade al frontmatter: `heroImage: /images/[slug].jpg`
 
-Llama a `mcp__canva__create-design-from-candidate` con ese `job_id` y `candidate_id` para guardarlo como diseño real. Obtendrás un `design_id`.
+**IMAGEN 2 — Ilustración técnica para primera sección:**
+- `query`: "Technical diagram or infographic for: [nombre de la primera sección H2 del post]. Electrical engineering concept, INDUCTECH TRAINING style, dark blue and electric blue colors, professional technical illustration."
+- Guarda como: `public/images/[slug]-2.jpg`
+- Inserta en el post justo después del primer H2, en una línea nueva: `![Ilustración técnica](/images/[slug]-2.jpg)`
 
-Llama a `mcp__canva__export-design` con ese `design_id`:
-- `format.type`: `jpg`
-- `format.width`: 1200
-- `format.height`: 630
-- `format.quality`: 85
+**IMAGEN 3 — Ilustración para sección de criterios o tabla:**
+- `query`: "Technical selection guide or comparison chart visual for: [nombre de la sección de criterios o la más importante del post]. INDUCTECH TRAINING, dark blue, professional electrical engineering style."
+- Guarda como: `public/images/[slug]-3.jpg`
+- Inserta en el post justo antes de la sección de criterios de selección o la última sección: `![Guía de selección](/images/[slug]-3.jpg)`
 
-Descarga la imagen con Bash:
-```bash
-curl -L "[URL_de_exportación]" -o "public/images/[slug].jpg"
-```
-
-Añade al frontmatter del post:
-```
-heroImage: /images/[slug].jpg
-```
-
-Si Canva falla por cualquier motivo, continúa sin imagen y omite el campo `heroImage`.
+Si Canva falla en alguna imagen, continúa con las demás. Si falla la imagen 1, omite `heroImage`.
 
 ---
 
