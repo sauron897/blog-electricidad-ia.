@@ -10,51 +10,228 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog — Electricidad, Docencia e IA</title>
-    <meta name="description" content="Artículos sobre electricidad, docencia e inteligencia artificial en español." />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <title>Blog Técnico — INDUC TECH Ingeniería Eléctrica</title>
+    <meta name="description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      body {
-        font-family: Georgia, serif;
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-        color: #222;
-        line-height: 1.7;
+      :root {
+        --navy: #0d1b2e;
+        --navy-light: #162436;
+        --blue: #0ea5e9;
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --border: #1e3a5f;
+        --surface: #111f33;
       }
-      h1 { font-size: 2rem; }
-      nav a { margin-right: 1rem; text-decoration: none; font-family: sans-serif; font-size: 0.9rem; color: #0066cc; }
-      ul { list-style: none; padding: 0; }
-      li { margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
-      .thumb { width: 120px; min-width: 120px; height: 80px; object-fit: cover; border-radius: 4px; }
-      .thumb-placeholder { width: 120px; min-width: 120px; height: 80px; background: #f0f0f0; border-radius: 4px; }
-      .post-body { flex: 1; }
-      li a { text-decoration: none; color: #222; font-size: 1.1rem; font-weight: bold; }
-      li a:hover { color: #0066cc; }
-      .meta { color: #666; font-size: 0.85rem; font-family: sans-serif; }
-      p.desc { margin-top: 0.3rem; font-size: 0.95rem; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--navy);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+      /* HEADER */
+      header {
+        background: var(--navy-light);
+        border-bottom: 1px solid var(--border);
+        padding: 0 2rem;
+      }
+      .header-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+      }
+      .logo-icon {
+        width: 28px;
+        height: 28px;
+        background: var(--blue);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+      nav a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 0.875rem;
+        margin-left: 1.5rem;
+        transition: color 0.2s;
+      }
+      nav a:hover { color: var(--blue); }
+      /* HERO BANNER */
+      .hero-banner {
+        background: linear-gradient(135deg, #0d1b2e 0%, #0c2a4a 50%, #0d1b2e 100%);
+        border-bottom: 1px solid var(--border);
+        padding: 3rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-banner::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(ellipse at 50% 0%, rgba(14,165,233,0.12) 0%, transparent 70%);
+      }
+      .hero-banner h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #f1f5f9;
+        margin-bottom: 0.75rem;
+        position: relative;
+      }
+      .hero-banner p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        position: relative;
+      }
+      /* POSTS GRID */
+      .posts-wrap {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2.5rem 2rem 4rem;
+      }
+      .section-title {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--blue);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+      }
+      .posts-list { display: flex; flex-direction: column; gap: 1rem; }
+      .post-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        display: flex;
+        gap: 0;
+        overflow: hidden;
+        transition: border-color 0.2s, transform 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+      .post-card:hover {
+        border-color: var(--blue);
+        transform: translateY(-1px);
+      }
+      .post-thumb {
+        width: 180px;
+        min-width: 180px;
+        height: 120px;
+        object-fit: cover;
+      }
+      .post-thumb-placeholder {
+        width: 180px;
+        min-width: 180px;
+        height: 120px;
+        background: linear-gradient(135deg, #162436, #1e3a5f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--blue);
+        opacity: 0.5;
+      }
+      .post-body {
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4rem;
+      }
+      .post-tag {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--blue);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .post-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #f1f5f9;
+        line-height: 1.35;
+      }
+      .post-desc {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.5;
+      }
+      .post-date {
+        font-size: 0.75rem;
+        color: #4a6a8a;
+        margin-top: 0.2rem;
+      }
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2rem;
+        text-align: center;
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      }
+      footer a { color: var(--blue); text-decoration: none; }
     </style>
   </head>
   <body>
-    <nav>
-      <a href="/">Inicio</a>
-      <a href="/blog">Blog</a>
-    </nav>
-    <h1>Electricidad, Docencia e IA</h1>
-    <p>Artículos prácticos sobre instalaciones eléctricas, enseñanza técnica e inteligencia artificial aplicada.</p>
-    <ul>
-      {posts.map((post) => (
-        <li>
-          {post.data.heroImage
-            ? <img class="thumb" src={post.data.heroImage} alt={post.data.title} />
-            : <div class="thumb-placeholder" />}
-          <div class="post-body">
-            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-            <p class="meta">{post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-            <p class="desc">{post.data.description}</p>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <span class="logo-icon">⚡</span>
+          INDUC TECH
+        </a>
+        <nav>
+          <a href="/">Inicio</a>
+          <a href="/blog">Blog</a>
+          <a href="https://www.inductech.cl" target="_blank">Web</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero-banner">
+      <h1>Blog Técnico de Ingeniería Eléctrica</h1>
+      <p>Normativa IEC · REBT · Instalaciones industriales · Docencia técnica · IA aplicada</p>
+    </div>
+
+    <div class="posts-wrap">
+      <p class="section-title">Artículos recientes</p>
+      <div class="posts-list">
+        {posts.map((post) => (
+          <a class="post-card" href={`/blog/${post.slug}`}>
+            {post.data.heroImage
+              ? <img class="post-thumb" src={post.data.heroImage} alt={post.data.title} />
+              : <div class="post-thumb-placeholder">⚡</div>}
+            <div class="post-body">
+              <span class="post-tag">Ingeniería Eléctrica</span>
+              <span class="post-title">{post.data.title}</span>
+              <span class="post-desc">{post.data.description}</span>
+              <span class="post-date">{post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://www.inductech.cl">INDUC TECH</a> — Ingeniería Eléctrica · Minería e Industria · Chile</p>
+    </footer>
   </body>
 </html>
