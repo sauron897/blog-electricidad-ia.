@@ -56,17 +56,22 @@ author: "Editor"
 - Resumen accionable (qué puede hacer el lector ahora)
 ```
 
-**Requisitos del post:**
-- Entre 800 y 1500 palabras
-- Tono: cercano y técnico, como un profesor que explica sin condescender
+**Requisitos del post — NIVEL TÉCNICO OBLIGATORIO:**
+- Entre 1000 y 1800 palabras
 - Lenguaje en español de España
-- Sin relleno: cada párrafo aporta valor real
-- Incluye al menos un ejemplo práctico o caso de uso real
+- El lector objetivo es un **técnico o ingeniero eléctrico**, no un usuario doméstico. Escribe para alguien que ya sabe qué es un diferencial, no para alguien que lo oye por primera vez.
+- **Cita normativa real y específica**: IEC, UNE-EN, REBT (ITC-BT concretas), NEC si aplica. No escribas "según la normativa vigente" — escribe "según IEC 61008-1" o "ITC-BT-24 del REBT".
+- **Explica los principios físicos o de ingeniería** detrás de cada concepto: por qué funciona así, qué pasa si no se cumple, qué consecuencia tiene en la instalación real.
+- **Incluye valores numéricos concretos**: tensiones, corrientes, impedancias, tiempos de disparo, secciones de cable, caídas de tensión — los que sean relevantes al tema.
+- Usa **tablas comparativas** cuando haya varios tipos, clases o criterios de selección.
+- Incluye al menos una sección de **criterios de selección o diagnóstico** con lógica de decisión aplicable en obra.
+- **Sin relleno**: no escribas párrafos introductorios que repitan lo que ya dijiste. Cada párrafo aporta información nueva.
+- **No escribas para posicionarte en búsquedas de principiantes**. El SEO de este blog apunta a técnicos que buscan respuestas específicas: "selectividad diferencial tipo S", "corriente de fuga capacitiva variador", "sección cable ITC-BT-19".
 
 **Temáticas válidas:**
-- Electricidad: instalaciones, normativa REBT, componentes, resolución de averías, fotovoltaica
-- Docencia técnica: metodologías, recursos, cómo enseñar conceptos eléctricos
-- IA aplicada: herramientas de IA para electricistas o docentes, automatización de tareas
+- Electricidad: fundamentos técnicos, normativa REBT/IEC/UNE, selección de componentes, cálculo de instalaciones, fotovoltaica, BT/MT, calidad de la energía
+- Docencia técnica: metodologías para enseñar ingeniería eléctrica, resolución de problemas técnicos en el aula, recursos para FP Electrotécnica
+- IA aplicada a la ingeniería eléctrica: automatización de cálculos, generación de documentación técnica, herramientas para ingenieros y técnicos
 
 ---
 
