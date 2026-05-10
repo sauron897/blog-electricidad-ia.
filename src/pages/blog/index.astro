@@ -1,0 +1,96 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — INDUCTECH TRAINING</title>
+    <meta name="description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --navy: #0e1a2e;
+        --navy-light: #1a2744;
+        --blue: #2563eb;
+        --blue-bright: #3b82f6;
+        --text: #e2e8f0;
+        --text-muted: #94a3b8;
+        --border: #1e3560;
+        --surface: #131f38;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); line-height: 1.6; min-height: 100vh; }
+      header { background: var(--navy-light); border-bottom: 1px solid var(--border); padding: 0 2rem; }
+      .header-inner { max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 80px; }
+      .logo { display: flex; align-items: center; text-decoration: none; }
+      .logo-img { height: 64px; width: auto; filter: brightness(0) invert(1); }
+      nav a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; margin-left: 1.5rem; transition: color 0.2s; }
+      nav a:hover, nav a.active { color: var(--blue-bright); }
+      .page-header { max-width: 900px; margin: 2.5rem auto 0; padding: 0 2rem; }
+      .page-header h1 { font-size: 1.5rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.25rem; }
+      .page-header p { color: var(--text-muted); font-size: 0.875rem; }
+      .posts-wrap { max-width: 900px; margin: 1.5rem auto; padding: 0 2rem 4rem; }
+      .posts-list { display: flex; flex-direction: column; gap: 1rem; }
+      .post-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; display: flex; overflow: hidden; transition: border-color 0.2s, transform 0.2s; text-decoration: none; color: inherit; }
+      .post-card:hover { border-color: var(--blue-bright); transform: translateY(-1px); }
+      .post-thumb { width: 180px; min-width: 180px; height: 120px; object-fit: cover; }
+      .post-thumb-placeholder { width: 180px; min-width: 180px; height: 120px; background: linear-gradient(135deg, #162436, #1e3a5f); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--blue-bright); opacity: 0.5; }
+      .post-body { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; justify-content: center; gap: 0.4rem; }
+      .post-tag { font-size: 0.7rem; font-weight: 600; color: var(--blue-bright); text-transform: uppercase; letter-spacing: 0.08em; }
+      .post-title { font-size: 1rem; font-weight: 600; color: #f1f5f9; line-height: 1.35; }
+      .post-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+      .post-date { font-size: 0.75rem; color: #4a6a8a; margin-top: 0.2rem; }
+      footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
+      footer a { color: var(--blue-bright); text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <img class="logo-img" src="/logo-training.png" alt="INDUCTECH TRAINING" />
+        </a>
+        <nav>
+          <a href="/">Inicio</a>
+          <a href="/blog" class="active">Blog</a>
+          <a href="https://www.inductech.cl" target="_blank">Web</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <h1>Todos los artículos</h1>
+      <p>{posts.length} artículo{posts.length !== 1 ? 's' : ''} publicado{posts.length !== 1 ? 's' : ''}</p>
+    </div>
+
+    <div class="posts-wrap">
+      <div class="posts-list">
+        {posts.map((post) => (
+          <a class="post-card" href={`/blog/${post.slug}`}>
+            {post.data.heroImage
+              ? <img class="post-thumb" src={post.data.heroImage} alt={post.data.title} />
+              : <div class="post-thumb-placeholder">⚡</div>}
+            <div class="post-body">
+              <span class="post-tag">Ingeniería Eléctrica</span>
+              <span class="post-title">{post.data.title}</span>
+              <span class="post-desc">{post.data.description}</span>
+              <span class="post-date">{post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://www.inductech.cl">INDUCTECH</a> — Ingeniería Eléctrica · Minería e Industria · Chile</p>
+    </footer>
+  </body>
+</html>
