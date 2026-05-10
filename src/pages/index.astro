@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Electricidad, Docencia e IA</title>
+    <meta name="description" content="Artículos sobre electricidad, docencia e inteligencia artificial en español." />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <style>
+      body {
+        font-family: Georgia, serif;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        color: #222;
+        line-height: 1.7;
+      }
+      h1 { font-size: 2rem; }
+      nav a { margin-right: 1rem; text-decoration: none; font-family: sans-serif; font-size: 0.9rem; color: #0066cc; }
+      ul { list-style: none; padding: 0; }
+      li { margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem; }
+      li a { text-decoration: none; color: #222; font-size: 1.1rem; font-weight: bold; }
+      li a:hover { color: #0066cc; }
+      .meta { color: #666; font-size: 0.85rem; font-family: sans-serif; }
+      p.desc { margin-top: 0.3rem; font-size: 0.95rem; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/blog">Blog</a>
+    </nav>
+    <h1>Electricidad, Docencia e IA</h1>
+    <p>Artículos prácticos sobre instalaciones eléctricas, enseñanza técnica e inteligencia artificial aplicada.</p>
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <p class="meta">{post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <p class="desc">{post.data.description}</p>
+        </li>
+      ))}
+    </ul>
+  </body>
+</html>
