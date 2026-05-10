@@ -3,6 +3,7 @@ title: "Cálculo de sección de cable eléctrico según ITC-BT-19"
 description: "Procedimiento técnico para dimensionar conductores en BT: criterio térmico, caída de tensión y cortocircuito con fórmulas, tablas y ejemplo numérico. ITC-BT-19 y UNE-HD 60364-5-52."
 pubDate: 2026-05-10
 keywords: ["calculo seccion cable electrico", "ITC-BT-19 intensidades admisibles", "caida de tension formula cable", "UNE-HD 60364-5-52 secciones conductores"]
+heroImage: /images/calculo-seccion-cable-electrico.png
 author: "Editor"
 ---
 
@@ -19,6 +20,8 @@ El artículo 2 de ITC-BT-19 obliga a verificar simultáneamente:
 3. **Criterio de cortocircuito**: la sección debe soportar la energía específica pasante (I²·t) durante el tiempo de actuación de la protección.
 
 La sección final es la mayor de las tres resultantes, redondeada al calibre comercial normalizado inmediatamente superior (1,5 / 2,5 / 4 / 6 / 10 / 16 / 25 / 35 / 50 mm²).
+
+![Ilustración técnica: tres criterios de selección de sección](/images/calculo-seccion-cable-electrico-2.png)
 
 ---
 
@@ -181,6 +184,8 @@ Sección por criterio de cortocircuito: **3,7 mm²** → tampoco domina.
 **Resultado final**: la sección más restrictiva es 6 mm² (criterio térmico). Sección comercial normalizada: **6 mm²**.
 
 ---
+
+![Guía de selección de cable en obra](/images/calculo-seccion-cable-electrico-3.png)
 
 ## Criterios de selección en obra: guía de decisión rápida
 
