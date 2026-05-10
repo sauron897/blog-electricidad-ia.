@@ -75,6 +75,38 @@ author: "Editor"
 
 ---
 
+## PASO 3.5 — Generar imagen con Canva
+
+Usa la herramienta `mcp__canva__generate-design` para crear una imagen de cabecera para el post.
+
+- `design_type`: `poster`
+- `brand_kit_id`: `kAFUsXX6fQI`
+- `query`: "Blog header image for INDUC TECH article about [tema del post]. Professional electrical engineering company. Technical, industrial style. Include the article title: [título]. Dark blue and white colors. Clean and professional."
+
+Toma el primer candidato del resultado (`candidate_id` y `job_id`).
+
+Llama a `mcp__canva__create-design-from-candidate` con ese `job_id` y `candidate_id` para guardarlo como diseño real. Obtendrás un `design_id`.
+
+Llama a `mcp__canva__export-design` con ese `design_id`:
+- `format.type`: `jpg`
+- `format.width`: 1200
+- `format.height`: 630
+- `format.quality`: 85
+
+Descarga la imagen con Bash:
+```bash
+curl -L "[URL_de_exportación]" -o "public/images/[slug].jpg"
+```
+
+Añade al frontmatter del post:
+```
+heroImage: /images/[slug].jpg
+```
+
+Si Canva falla por cualquier motivo, continúa sin imagen y omite el campo `heroImage`.
+
+---
+
 ## PASO 4 — Guardar el post
 
 Genera un slug a partir del título: en minúsculas, sin tildes, espacios reemplazados por guiones, sin caracteres especiales. Ejemplo: "Qué es un diferencial eléctrico" → `que-es-un-diferencial-electrico`
