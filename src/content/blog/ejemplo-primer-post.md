@@ -4,6 +4,8 @@ description: "Análisis técnico del interruptor diferencial: principio de funci
 pubDate: 2026-05-10
 keywords: ["interruptor diferencial", "IEC 60755", "REBT ITC-BT-24", "corriente de defecto", "protección diferencial"]
 author: "INDUC TECH"
+heroImage: /images/interruptor-diferencial.png
+readingTime: 12
 ---
 
 El interruptor diferencial es el dispositivo de protección más incomprendido de una instalación eléctrica. Se sabe que "protege de las electrocuciones", pero pocos instaladores pueden explicar por qué 30 mA es el umbral estándar, qué diferencia real hay entre un tipo AC y un tipo A, o por qué un diferencial puede saltar sin haber ningún defecto real. Este artículo cubre el fundamento técnico completo.
