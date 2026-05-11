@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+    <defs>
+          <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0d1b2e"/>
+                  <stop offset="50%" style="stop-color:#0c2a4a"/>
+                  <stop offset="100%" style="stop-color:#0d1b2e"/>
+          </linearGradient>
+          <linearGradient id="core" cx="50%" cy="50%" r="50%" fx="40%" fy="40%" gradientUnits="objectBoundingBox">
+                  <stop offset="0%" style="stop-color:#374151"/>
+                  <stop offset="100%" style="stop-color:#111827"/>
+          </linearGradient>
+          <filter id="glow2">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="glow3">
+                  <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+                  <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+    </defs>
+
+    <!-- Fondo -->
+    <rect width="900" height="480" fill="url(#bg2)"/>
+    <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+
+    <!-- Título -->
+    <text x="450" y="36" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Interruptor Diferencial — Principio de Funcionamiento</text>
+    <text x="450" y="56" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Toroide sumador de corrientes · IEC 61008-1 · IEC 60755</text>
+    <line x1="60" y1="66" x2="840" y2="66" stroke="#1e3560" stroke-width="1"/>
+
+    <!-- ═══════════ ESQUEMA CIRCUITO ═══════════ -->
+    <!-- Fuente AC -->
+    <circle cx="85" cy="200" r="22" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <text x="85" y="196" font-family="Arial,sans-serif" font-size="14" fill="#3b82f6" text-anchor="middle">~</text>
+    <text x="85" y="208" font-family="Arial,sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">230V</text>
+    <text x="85" y="238" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Fuente AC</text>
+
+    <!-- Línea Fase -->
+    <line x1="107" y1="190" x2="180" y2="190" stroke="#ef4444" stroke-width="2.5"/>
+    <!-- Línea Neutro -->
+    <line x1="107" y1="210" x2="180" y2="210" stroke="#94a3b8" stroke-width="2.5"/>
+
+    <!-- Toroide (núcleo magnético) -->
+    <!-- Toro exterior -->
+    <ellipse cx="240" cy="200" rx="55" ry="55" fill="none" stroke="#374151" stroke-width="14" filter="url(#glow2)"/>
+    <ellipse cx="240" cy="200" rx="55" ry="55" fill="none" stroke="#6b7280" stroke-width="2"/>
+    <!-- Agujero del toro -->
+    <ellipse cx="240" cy="200" rx="28" ry="28" fill="#0d1b2e"/>
+    <!-- Etiqueta toroide -->
+    <text x="240" y="197" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Toroide</text>
+    <text x="240" y="209" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">sumador</text>
+
+    <!-- Conductor Fase atravesando el toroide -->
+    <line x1="180" y1="190" x2="212" y2="190" stroke="#ef4444" stroke-width="2.5"/>
+    <line x1="268" y1="190" x2="330" y2="190" stroke="#ef4444" stroke-width="2.5"/>
+    <!-- Conductor Neutro atravesando el toroide -->
+    <line x1="180" y1="210" x2="212" y2="210" stroke="#94a3b8" stroke-width="2.5"/>
+    <line x1="268" y1="210" x2="330" y2="210" stroke="#94a3b8" stroke-width="2.5"/>
+
+    <!-- Devanado secundario del toroide -->
+    <line x1="240" y1="145" x2="240" y2="80" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <line x1="240" y1="255" x2="240" y2="320" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <!-- Bobina secundaria símbolo -->
+    <rect x="225" y="75" width="30" height="10" fill="none" stroke="#f59e0b" stroke-width="1.5" rx="5"/>
+    <text x="240" y="70" font-family="Arial,sans-serif" font-size="8.5" fill="#f59e0b" text-anchor="middle">IΔ detectada</text>
+
+    <!-- Relé -->
+    <rect x="218" y="318" width="44" height="28" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="1.5" rx="4"/>
+    <text x="240" y="330" font-family="Arial,sans-serif" font-size="8.5" fill="#f59e0b" text-anchor="middle" font-weight="bold">RELÉ</text>
+    <text x="240" y="342" font-family="Arial,sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">IΔn umbral</text>
+
+    <!-- Conexión relé a interruptor -->
+    <line x1="262" y1="332" x2="350" y2="332" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="350" y1="332" x2="350" y2="190" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+    <!-- Interruptor -->
+    <line x1="330" y1="190" x2="350" y2="190" stroke="#ef4444" stroke-width="2.5"/>
+    <circle cx="355" cy="190" r="4" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <line x1="355" y1="186" x2="375" y2="178" stroke="#22c55e" stroke-width="2.5"/>
+    <circle cx="380" cy="176" r="4" fill="none" stroke="#22c55e" stroke-width="2"/>
+    <line x1="384" y1="176" x2="410" y2="176" stroke="#ef4444" stroke-width="2.5"/>
+    <line x1="330" y1="210" x2="410" y2="210" stroke="#94a3b8" stroke-width="2.5"/>
+    <text x="368" y="165" font-family="Arial,sans-serif" font-size="9" fill="#22c55e" text-anchor="middle">Contacto</text>
+
+    <!-- Carga -->
+    <rect x="410" y="176" width="50" height="44" fill="rgba(37,99,235,0.1)" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+    <text x="435" y="196" font-family="Arial,sans-serif" font-size="9" fill="#3b82f6" text-anchor="middle" font-weight="bold">CARGA</text>
+    <text x="435" y="209" font-family="Arial,sans-serif" font-size="8" fill="#94a3b8" text-anchor="middle">R / M</text>
+
+    <!-- Fuga a tierra -->
+    <line x1="460" y1="196" x2="520" y2="196" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <line x1="520" y1="120" x2="520" y2="260" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="548" y="155" font-family="Arial,sans-serif" font-size="9" fill="#ef4444" text-anchor="middle" font-weight="bold">Id = 30 mA</text>
+    <text x="548" y="167" font-family="Arial,sans-serif" font-size="8.5" fill="#94a3b8" text-anchor="middle">Fuga a tierra</text>
+    <!-- Símbolo tierra -->
+    <line x1="520" y1="260" x2="520" y2="290" stroke="#64748b" stroke-width="2"/>
+    <line x1="505" y1="290" x2="535" y2="290" stroke="#64748b" stroke-width="2.5"/>
+    <line x1="510" y1="296" x2="530" y2="296" stroke="#64748b" stroke-width="2"/>
+    <line x1="515" y1="302" x2="525" y2="302" stroke="#64748b" stroke-width="1.5"/>
+    <text x="520" y="318" font-family="Arial,sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">Tierra (PE)</text>
+
+    <!-- Persona (figura simplificada) -->
+    <circle cx="560" cy="175" r="10" fill="none" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="560" y1="185" x2="560" y2="215" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="545" y1="197" x2="575" y2="197" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="560" y1="215" x2="548" y2="232" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="560" y1="215" x2="572" y2="232" stroke="#fbbf24" stroke-width="2"/>
+    <text x="560" y="248" font-family="Arial,sans-serif" font-size="8.5" fill="#fbbf24" text-anchor="middle">Persona</text>
+    <!-- Flecha corriente por persona -->
+    <line x1="520" y1="196" x2="548" y2="196" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="2,2"/>
+
+    <!-- Desequilibrio indicado -->
+    <text x="240" y="408" font-family="Arial,sans-serif" font-size="9.5" fill="#94a3b8" text-anchor="middle">IF ≠ IN → IΔ ≠ 0</text>
+    <text x="240" y="422" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">El toroide detecta desequilibrio</text>
+
+    <!-- Línea divisoria -->
+    <line x1="600" y1="75" x2="600" y2="455" stroke="#1e3560" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- ═══════════ TABLA CLASES ═══════════ -->
+    <text x="730" y="92" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Clases según IEC 60755</text>
+
+    <!-- Clase AC -->
+    <rect x="612" y="105" width="270" height="52" fill="rgba(37,99,235,0.08)" stroke="#2563eb" stroke-width="1.5" rx="5"/>
+    <rect x="612" y="105" width="270" height="20" fill="rgba(37,99,235,0.2)" rx="5"/>
+    <text x="620" y="119" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#3b82f6">Tipo AC</text>
+    <text x="888" y="119" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="end">Solo sinusoidal 50/60 Hz</text>
+    <text x="618" y="135" font-family="Arial,sans-serif" font-size="9.5" fill="#94a3b8">Cargas resistivas e inductivas puras</text>
+    <text x="618" y="149" font-family="Arial,sans-serif" font-size="9" fill="#64748b">⚠ No apto con electrónica de potencia</text>
+
+    <!-- Clase A -->
+    <rect x="612" y="162" width="270" height="52" fill="rgba(34,197,94,0.08)" stroke="#22c55e" stroke-width="1.5" rx="5"/>
+    <rect x="612" y="162" width="270" height="20" fill="rgba(34,197,94,0.2)" rx="5"/>
+    <text x="620" y="176" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#22c55e">Tipo A</text>
+    <text x="888" y="176" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="end">AC + CC pulsante</text>
+    <text x="618" y="192" font-family="Arial,sans-serif" font-size="9.5" fill="#94a3b8">Mínimo recomendado hoy en instalaciones</text>
+    <text x="618" y="206" font-family="Arial,sans-serif" font-size="9" fill="#22c55e">✓ Fuentes conmutadas · cargadores · VFD</text>
+
+    <!-- Clase F -->
+    <rect x="612" y="219" width="270" height="52" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" stroke-width="1.5" rx="5"/>
+    <rect x="612" y="219" width="270" height="20" fill="rgba(245,158,11,0.2)" rx="5"/>
+    <text x="620" y="233" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f59e0b">Tipo F</text>
+    <text x="888" y="233" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="end">AC + CC + frecuencias medias</text>
+    <text x="618" y="249" font-family="Arial,sans-serif" font-size="9.5" fill="#94a3b8">Bombas de calor · VE modo 3 · VRF</text>
+    <text x="618" y="263" font-family="Arial,sans-serif" font-size="9" fill="#f59e0b">Detecta hasta varios kHz</text>
+
+    <!-- Clase B -->
+    <rect x="612" y="276" width="270" height="52" fill="rgba(239,68,68,0.08)" stroke="#ef4444" stroke-width="1.5" rx="5"/>
+    <rect x="612" y="276" width="270" height="20" fill="rgba(239,68,68,0.2)" rx="5"/>
+    <text x="620" y="290" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#ef4444">Tipo B</text>
+    <text x="888" y="290" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="end">AC + CC + CC lisa</text>
+    <text x="618" y="306" font-family="Arial,sans-serif" font-size="9.5" fill="#94a3b8">Instalaciones FV · cargadores trifásicos VE</text>
+    <text x="618" y="320" font-family="Arial,sans-serif" font-size="9" fill="#ef4444">Obligatorio con convertidores CC/CA</text>
+
+    <!-- Sensibilidades -->
+    <rect x="612" y="338" width="270" height="75" fill="rgba(255,255,255,0.02)" stroke="#1e3560" stroke-width="1" rx="5"/>
+    <text x="747" y="354" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Sensibilidades normalizadas</text>
+    <rect x="620" y="360" width="50" height="18" fill="rgba(239,68,68,0.2)" stroke="#ef4444" stroke-width="1" rx="3"/>
+    <text x="645" y="373" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">10 mA</text>
+    <text x="680" y="373" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Zonas mojadas</text>
+    <rect x="620" y="382" width="50" height="18" fill="rgba(34,197,94,0.2)" stroke="#22c55e" stroke-width="1" rx="3"/>
+    <text x="645" y="395" font-family="Arial,sans-serif" font-size="10" fill="#22c55e" text-anchor="middle" font-weight="bold">30 mA</text>
+    <text x="680" y="395" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">Protección personas ← estándar</text>
+    <rect x="753" y="360" width="60" height="18" fill="rgba(148,163,184,0.1)" stroke="#475569" stroke-width="1" rx="3"/>
+    <text x="783" y="373" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">300 mA</text>
+    <text x="818" y="373" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Anti-incendio</text>
+    <rect x="753" y="382" width="60" height="18" fill="rgba(148,163,184,0.1)" stroke="#475569" stroke-width="1" rx="3"/>
+    <text x="783" y="395" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">1 A</text>
+    <text x="818" y="395" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Selectividad</text>
+
+    <!-- Umbral disparo info -->
+    <rect x="612" y="422" width="270" height="28" fill="rgba(6,182,212,0.1)" stroke="#06b6d4" stroke-width="1" rx="4"/>
+    <text x="747" y="433" font-family="Arial,sans-serif" font-size="9.5" fill="#06b6d4" text-anchor="middle" font-weight="bold">Tiempo de disparo IEC 61008-1:</text>
+    <text x="747" y="446" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">t &lt; 30 ms para IΔ ≥ 5·IΔn · Tipo S: retardo 60-80 ms</text>
+
+    <!-- Etiqueta circuito izquierda -->
+    <text x="300" y="420" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Corriente fase: IF</text>
+    <text x="300" y="434" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Corriente neutro: IN</text>
+    <text x="300" y="450" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle" font-weight="bold">IΔ = IF - IN = 30 mA → DISPARO</text>
+
+    <!-- Normativa referencia -->
+    <text x="130" y="420" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">IEC 61008-1 · IEC 60755</text>
+    <text x="130" y="434" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">EN 62423 · IEC TS 60479-1</text>
+    <text x="130" y="448" font-family="Arial,sans-serif" font-size="9.5" fill="#3b82f6" text-anchor="middle">REBT ITC-BT-24 / ITC-BT-25</text>
+</svg>
