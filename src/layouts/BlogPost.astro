@@ -5,277 +5,634 @@ interface Props {
   pubDate: Date;
   keywords?: string[];
   heroImage?: string;
+  author?: string;
+  readingTime?: number;
 }
 
-const { title, description, pubDate, keywords = [], heroImage } = Astro.props;
+const { title, description, pubDate, keywords = [], heroImage, author = 'INDUC TECH', readingTime } = Astro.props;
 const formattedDate = pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+
+// Calcular tiempo de lectura desde el slot si no se provee
+const estimatedTime = readingTime ?? 8;
 ---
 
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} — INDUC TECH</title>
-    <meta name="description" content={description} />
-    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
-    <link rel="canonical" href={Astro.url} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="article" />
-    {heroImage && <meta property="og:image" content={heroImage} />}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
-      :root {
-        --navy: #0e1a2e;
-        --navy-light: #1a2744;
-        --blue: #2563eb;
-        --blue-bright: #3b82f6;
-        --blue-steel: #2b6cb0;
-        --text: #e2e8f0;
-        --text-muted: #94a3b8;
-        --border: #1e3560;
-        --surface: #131f38;
-      }
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body {
-        font-family: 'Inter', sans-serif;
-        background: var(--navy);
-        color: var(--text);
-        line-height: 1.75;
-      }
-      /* HEADER */
-      header {
-        background: var(--navy-light);
-        border-bottom: 1px solid var(--border);
-        padding: 0 2rem;
-      }
-      .header-inner {
-        max-width: 860px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 80px;
-      }
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        text-decoration: none;
-        color: var(--text);
-        font-weight: 700;
-        font-size: 1rem;
-        letter-spacing: 0.05em;
-      }
-      .logo-img {
-        height: 140px;
-        width: auto;
-        filter: brightness(0) invert(1);
-        margin: -28px 0;
-      }
-      nav a {
-        color: var(--text-muted);
-        text-decoration: none;
-        font-size: 0.875rem;
-        margin-left: 1.5rem;
-        transition: color 0.2s;
-      }
-      nav a:hover { color: var(--blue); }
-      /* HERO IMAGE */
-      .hero-wrap {
-        max-width: 860px;
-        margin: 2rem auto 0;
-        padding: 0 2rem;
-      }
-      .hero-img {
-        width: 100%;
-        max-height: 380px;
-        object-fit: cover;
-        border-radius: 8px;
-        border: 1px solid var(--border);
-      }
-      /* ARTICLE */
-      .article-wrap {
-        max-width: 860px;
-        margin: 0 auto;
-        padding: 2rem 2rem 4rem;
-      }
-      .article-meta {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        flex-wrap: wrap;
-      }
-      .tag {
-        background: rgba(37, 99, 235, 0.15);
-        color: var(--blue-bright);
-        border: 1px solid rgba(37, 99, 235, 0.35);
-        padding: 0.2rem 0.7rem;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 500;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-      }
-      .date {
-        color: var(--text-muted);
-        font-size: 0.875rem;
-      }
-      h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.25;
-        color: #f1f5f9;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border);
-      }
-      /* CONTENT */
-      .content h2 {
-        font-size: 1.35rem;
-        font-weight: 600;
-        color: #f1f5f9;
-        margin: 2.5rem 0 1rem;
-        padding-left: 0.75rem;
-        border-left: 3px solid var(--blue-bright);
-      }
-      .content h3 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: var(--text);
-        margin: 1.5rem 0 0.75rem;
-      }
-      .content p {
-        margin-bottom: 1.25rem;
-        color: #cbd5e1;
-        font-size: 0.975rem;
-      }
-      .content strong { color: #f1f5f9; font-weight: 600; }
-      .content a { color: var(--blue); }
-      .content ul, .content ol {
-        padding-left: 1.5rem;
-        margin-bottom: 1.25rem;
-        color: #cbd5e1;
-        font-size: 0.975rem;
-      }
-      .content li { margin-bottom: 0.4rem; }
-      /* TABLE */
-      .content table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1.5rem 0;
-        font-size: 0.9rem;
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        overflow: hidden;
-      }
-      .content th {
-        background: var(--surface);
-        color: var(--blue);
-        font-weight: 600;
-        padding: 0.75rem 1rem;
-        text-align: left;
-        border-bottom: 1px solid var(--border);
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-      .content td {
-        padding: 0.7rem 1rem;
-        border-bottom: 1px solid rgba(30, 58, 95, 0.5);
-        color: #cbd5e1;
-      }
-      .content tr:last-child td { border-bottom: none; }
-      .content tr:hover td { background: rgba(14, 165, 233, 0.04); }
-      /* CODE */
-      .content code {
-        font-family: 'JetBrains Mono', monospace;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        color: var(--blue);
-        padding: 0.15em 0.45em;
-        border-radius: 4px;
-        font-size: 0.85em;
-      }
-      .content pre {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        padding: 1.25rem;
-        overflow-x: auto;
-        margin: 1.5rem 0;
-      }
-      .content pre code {
-        background: none;
-        border: none;
-        color: #e2e8f0;
-        padding: 0;
-        font-size: 0.875rem;
-      }
-      /* INLINE IMAGES */
-      .content img {
-        width: 100%;
-        border-radius: 6px;
-        border: 1px solid var(--border);
-        margin: 1.5rem 0;
-        display: block;
-      }
-      .content img + em {
-        display: block;
-        text-align: center;
-        font-size: 0.8rem;
-        color: var(--text-muted);
-        margin-top: -1rem;
-        margin-bottom: 1.5rem;
-      }
-      /* FOOTER */
-      footer {
-        border-top: 1px solid var(--border);
-        padding: 2rem;
-        text-align: center;
-        color: var(--text-muted);
-        font-size: 0.8rem;
-      }
-      footer a { color: var(--blue); text-decoration: none; }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="header-inner">
-        <a href="/" class="logo">
-          <img class="logo-img" src="/logo-training.png" alt="INDUCTECH TRAINING" />
-        </a>
-        <nav>
-          <a href="/">Inicio</a>
-          <a href="/blog">Blog</a>
-          <a href="https://www.inductech.cl" target="_blank">Web</a>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — INDUC TECH</title>
+  <meta name="description" content={description} />
+  {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+  <link rel="canonical" href={Astro.url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="article" />
+  {heroImage && <meta property="og:image" content={heroImage} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0e1a2e;
+      --navy-light: #1a2744;
+      --blue: #2563eb;
+      --blue-bright: #3b82f6;
+      --blue-steel: #2b6cb0;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #1e3560;
+      --surface: #131f38;
+      --surface-hover: #1a2a4a;
+      --accent: #06b6d4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-    {heroImage && (
-      <div class="hero-wrap">
-        <img class="hero-img" src={heroImage} alt={title} />
-      </div>
-    )}
+    /* HEADER */
+    header {
+      background: var(--navy-light);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+    }
+    .logo-img {
+      height: 140px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      margin: -28px 0;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--blue-bright); }
 
-    <div class="article-wrap">
+    /* HERO IMAGE */
+    .hero-wrap {
+      max-width: 860px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+    }
+    .hero-img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    /* ARTICLE LAYOUT */
+    .article-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+    }
+
+    /* MAIN CONTENT */
+    .article-main {}
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .tag {
+      background: rgba(37, 99, 235, 0.15);
+      color: var(--blue-bright);
+      border: 1px solid rgba(37, 99, 235, 0.35);
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .meta-date {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    .meta-reading {
+      color: var(--accent);
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .meta-reading::before {
+      content: '⏱';
+      font-size: 0.75rem;
+    }
+
+    /* AUTHOR CARD */
+    .author-card {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      flex-shrink: 0;
+      text-transform: uppercase;
+    }
+    .author-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .author-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* ARTICLE TITLE */
+    h1.article-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .article-description {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+
+    /* PROSE STYLES */
+    .prose {
+      font-size: 1.0rem;
+      line-height: 1.85;
+      color: #cbd5e1;
+    }
+    .prose h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .prose h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--blue-bright);
+      margin: 1.75rem 0 0.75rem;
+    }
+    .prose p {
+      margin-bottom: 1.25rem;
+    }
+    .prose ul, .prose ol {
+      padding-left: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .prose li {
+      margin-bottom: 0.5rem;
+    }
+    .prose strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .prose a {
+      color: var(--blue-bright);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .prose a:hover { color: var(--accent); }
+    .prose code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--surface);
+      color: var(--accent);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.875em;
+      border: 1px solid var(--border);
+    }
+    .prose pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .prose pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #e2e8f0;
+    }
+    .prose blockquote {
+      border-left: 3px solid var(--blue);
+      padding: 0.75rem 1.25rem;
+      margin: 1.5rem 0;
+      background: var(--surface);
+      border-radius: 0 6px 6px 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+    .prose table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      overflow-x: auto;
+      display: block;
+    }
+    .prose th {
+      background: var(--navy-light);
+      color: var(--blue-bright);
+      font-weight: 600;
+      padding: 0.6rem 0.9rem;
+      text-align: left;
+      border: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .prose td {
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+    }
+    .prose tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .prose img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: sticky;
+      top: 90px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .sidebar-card h3 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue-bright);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .sidebar-card h3::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 14px;
+      background: var(--blue-bright);
+      border-radius: 2px;
+    }
+
+    /* TOC */
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .toc-list li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      display: block;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      border-left: 2px solid transparent;
+      transition: all 0.2s;
+    }
+    .toc-list li a:hover {
+      color: var(--blue-bright);
+      border-left-color: var(--blue-bright);
+      background: rgba(59,130,246,0.05);
+    }
+
+    /* NORMATIVA LINKS */
+    .normativa-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .normativa-list li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      padding: 0.4rem 0.5rem;
+      border-radius: 5px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+    .normativa-list li a:hover {
+      color: var(--blue-bright);
+      background: rgba(37,99,235,0.08);
+      border-color: rgba(37,99,235,0.2);
+    }
+    .normativa-list .icon {
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .normativa-badge {
+      display: inline-block;
+      background: rgba(6,182,212,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(6,182,212,0.25);
+      border-radius: 3px;
+      font-size: 0.65rem;
+      padding: 0.05rem 0.3rem;
+      font-weight: 600;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    /* NOTICIAS */
+    .noticias-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .noticias-list li a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      padding: 0.4rem 0.5rem;
+      border-radius: 5px;
+      border-left: 2px solid var(--border);
+      transition: all 0.2s;
+    }
+    .noticias-list li a:hover {
+      color: var(--blue-bright);
+      border-left-color: var(--blue-bright);
+      background: rgba(59,130,246,0.05);
+    }
+    .noticias-list .source {
+      display: block;
+      font-size: 0.68rem;
+      color: var(--accent);
+      margin-top: 0.2rem;
+      font-weight: 500;
+    }
+
+    /* BACK LINK */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: all 0.2s;
+    }
+    .back-link:hover {
+      color: var(--blue-bright);
+      border-color: var(--blue-bright);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy-light);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--blue-bright); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <img src="/logo-inductech.png" alt="INDUCTECH TRAINING" class="logo-img" onerror="this.style.display='none'" />
+      </a>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/blog">Blog</a>
+        <a href="https://www.inductech.cl" target="_blank" rel="noopener">Web</a>
+      </nav>
+    </div>
+  </header>
+
+  {heroImage && (
+    <div class="hero-wrap">
+      <img src={heroImage} alt={title} class="hero-img" />
+    </div>
+  )}
+
+  <div class="article-layout">
+    <main class="article-main">
+      <a href="/blog" class="back-link">← Volver al Blog</a>
+
       <div class="article-meta">
         <span class="tag">Ingeniería Eléctrica</span>
-        <span class="date">{formattedDate}</span>
+        <span class="meta-date">{formattedDate}</span>
+        <span class="meta-reading">{estimatedTime} min de lectura</span>
       </div>
-      <h1>{title}</h1>
-      <div class="content">
-        <slot />
-      </div>
-    </div>
 
-    <footer>
-      <p>© 2026 <a href="https://www.inductech.cl">INDUC TECH</a> — Ingeniería Eléctrica · Minería e Industria</p>
-    </footer>
-  </body>
+      <h1 class="article-title">{title}</h1>
+      <p class="article-description">{description}</p>
+
+      <div class="author-card">
+        <div class="author-avatar">{author.charAt(0)}</div>
+        <div>
+          <div class="author-name">{author}</div>
+          <div class="author-role">Ingeniería Eléctrica · INDUC TECH</div>
+        </div>
+      </div>
+
+      <article class="prose">
+        <slot />
+      </article>
+    </main>
+
+    <aside class="sidebar">
+
+      <!-- NORMATIVA CHILENA -->
+      <div class="sidebar-card">
+        <h3>Normativa Eléctrica Chile</h3>
+        <ul class="normativa-list">
+          <li>
+            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/" target="_blank" rel="noopener">
+              <span class="icon">⚡</span>
+              <span>Reglamentos SEC — Electricidad</span>
+              <span class="normativa-badge">SEC</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/ric/" target="_blank" rel="noopener">
+              <span class="icon">📋</span>
+              <span>RIC — Reglamentos de Instalaciones de Consumo</span>
+              <span class="normativa-badge">RIC</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.bcn.cl/leychile/navegar?idNorma=1010473" target="_blank" rel="noopener">
+              <span class="icon">📜</span>
+              <span>Ley 20.936 — Nueva Ley de Transmisión Eléctrica</span>
+              <span class="normativa-badge">Ley</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.bcn.cl/leychile/navegar?idNorma=22037" target="_blank" rel="noopener">
+              <span class="icon">📜</span>
+              <span>DFL N°4 — Ley General de Servicios Eléctricos</span>
+              <span class="normativa-badge">DFL</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/nseg/" target="_blank" rel="noopener">
+              <span class="icon">🔒</span>
+              <span>NSEG — Normas de Seguridad Eléctrica</span>
+              <span class="normativa-badge">NSEG</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://inn.cl/nch-electronica-electrotecnia" target="_blank" rel="noopener">
+              <span class="icon">📐</span>
+              <span>NCh Elec 4/2003 — Instalaciones Interiores</span>
+              <span class="normativa-badge">NCh</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cne.cl/normativa/" target="_blank" rel="noopener">
+              <span class="icon">🏛️</span>
+              <span>CNE — Comisión Nacional de Energía</span>
+              <span class="normativa-badge">CNE</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- NOTICIAS SECTOR -->
+      <div class="sidebar-card">
+        <h3>Noticias del Sector</h3>
+        <ul class="noticias-list">
+          <li>
+            <a href="https://www.electricidad.cl" target="_blank" rel="noopener">
+              Revista Electricidad — Noticias eléctricas Chile
+              <span class="source">electricidad.cl</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.cne.cl/prensa/noticias/" target="_blank" rel="noopener">
+              Noticias CNE — Política energética Chile
+              <span class="source">cne.cl</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.sec.cl/noticias/" target="_blank" rel="noopener">
+              SEC — Superintendencia de Electricidad y Combustibles
+              <span class="source">sec.cl</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://energia.gob.cl/noticias" target="_blank" rel="noopener">
+              Ministerio de Energía — Chile
+              <span class="source">energia.gob.cl</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.coordinador.cl/noticias/" target="_blank" rel="noopener">
+              Coordinador Eléctrico Nacional
+              <span class="source">coordinador.cl</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <footer>
+    <p>© {new Date().getFullYear()} <a href="https://www.inductech.cl" target="_blank" rel="noopener">INDUC TECH</a> — Ingeniería Eléctrica · Minería e Industria · Chile</p>
+  </footer>
+</body>
 </html>
