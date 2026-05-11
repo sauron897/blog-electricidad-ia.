@@ -26,6 +26,36 @@ Anota los resultados. Los usarás en el post.
 
 ---
 
+## PASO 2.5 — Verificación técnica contra GElectrical
+
+Antes de escribir el post, ejecuta el comando correspondiente al tema para consultar los valores reales de la base de datos IEC:
+
+```bash
+# Cables y conductores (secciones, materiales, reactancias IEC):
+python3 agente/verificar.py cable
+
+# Magnetotérmicos MCB/MCCB (calibres, curvas B/C/D, poder de corte):
+python3 agente/verificar.py cb
+
+# Motores trifásicos (potencias, corrientes, parámetros IEC):
+python3 agente/verificar.py motor
+
+# Transformadores (potencias, tensiones de cortocircuito IEC 60076):
+python3 agente/verificar.py transformer
+
+# Resumen de todas las bases de datos disponibles:
+python3 agente/verificar.py all
+```
+
+**Regla obligatoria**: cualquier valor numérico citado en el post (intensidades admisibles, calibres normalizados, reactancias de cable, parámetros de motor) debe ser coherente con los datos de `referencias/GElectrical/gelectrical/database/`. Si hay discrepancia, usa el valor del repositorio GElectrical (que implementa IEC directamente) y anota la diferencia en el texto del post si es relevante para el lector.
+
+Si el submodulo no está inicializado, ejecuta primero:
+```bash
+git submodule update --init --recursive
+```
+
+---
+
 ## PASO 3 — Escribir el post
 
 Escribe un artículo completo en Markdown con esta estructura:

@@ -1,0 +1,3 @@
+[submodule "referencias/GElectrical"]
+	path = referencias/GElectrical
+	url = https://github.com/manuvarkey/GElectrical.git
