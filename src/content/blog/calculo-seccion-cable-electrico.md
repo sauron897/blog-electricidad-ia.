@@ -3,8 +3,9 @@ title: "Cálculo de sección de cable eléctrico según ITC-BT-19"
 description: "Procedimiento técnico para dimensionar conductores en BT: criterio térmico, caída de tensión y cortocircuito con fórmulas, tablas y ejemplo numérico. ITC-BT-19 y UNE-HD 60364-5-52."
 pubDate: 2026-05-10
 keywords: ["calculo seccion cable electrico", "ITC-BT-19 intensidades admisibles", "caida de tension formula cable", "UNE-HD 60364-5-52 secciones conductores"]
-heroImage: /images/calculo-seccion-cable-electrico.png
+heroImage: /images/calculo-seccion-cable-electrico.svg
 author: "Editor"
+readingTime: 15
 ---
 
 Calcular la sección de un conductor no es elegir "el cable que se suele poner" ni aplicar una única fórmula. Es resolver tres criterios independientes y quedarse con la sección comercial más restrictiva. El REBT, en su **ITC-BT-19**, y la norma **UNE-HD 60364-5-52:2022** (que sustituyó definitivamente a UNE 20460-5-523) establecen el procedimiento obligatorio para instalaciones de baja tensión en España.
