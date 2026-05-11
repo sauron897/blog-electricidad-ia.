@@ -4,7 +4,7 @@ description: "Análisis técnico del interruptor diferencial: principio de funci
 pubDate: 2026-05-10
 keywords: ["interruptor diferencial", "IEC 60755", "REBT ITC-BT-24", "corriente de defecto", "protección diferencial"]
 author: "INDUC TECH"
-heroImage: /images/interruptor-diferencial.png
+heroImage: /images/interruptor-diferencial.svg
 readingTime: 12
 ---
 
