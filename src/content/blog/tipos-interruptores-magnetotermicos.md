@@ -3,7 +3,7 @@ title: "Tipos de interruptores magnetotérmicos y cómo elegirlos"
 description: "Guía técnica completa sobre curvas de disparo B, C y D, calibre, poder de corte y coordinación con conductores según ITC-BT-22. Con tabla comparativa y ejemplo de selección."
 pubDate: 2026-05-11
 keywords: ["interruptores magnetotermicos tipos", "curva B C D magnetotermico", "calibre magnetotermico como elegir", "ITC-BT-22 proteccion sobreintensidades", "poder de corte magnetotermico"]
-heroImage: /images/tipos-interruptores-magnetotermicos.png
+heroImage: /images/tipos-interruptores-magnetotermicos.svg
 author: "Editor"
 ---
 
