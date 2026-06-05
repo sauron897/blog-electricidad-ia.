@@ -1,87 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Técnico — INDUC TECH Ingeniería Eléctrica</title>
-  <meta name="description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<BaseLayout
+  title="Blog Técnico — INDUC TECH Ingeniería Eléctrica"
+  description="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada."
+  activePage="home"
+>
   <style>
-    :root {
-      --navy: #0e1a2e;
-      --navy-light: #1a2744;
-      --blue: #2563eb;
-      --blue-bright: #3b82f6;
-      --text: #e2e8f0;
-      --text-muted: #94a3b8;
-      --border: #1e3560;
-      --surface: #131f38;
-      --accent: #06b6d4;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--navy);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    /* HEADER */
-    header {
-      background: var(--navy-light);
-      border-bottom: 1px solid var(--border);
-      padding: 0 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 700;
-      font-size: 1rem;
-      letter-spacing: 0.05em;
-    }
-    .logo-img {
-      height: 140px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      margin: -28px 0;
-    }
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      margin-left: 1.5rem;
-      transition: color 0.2s;
-    }
-    nav a:hover { color: var(--blue-bright); }
-
-    /* HERO BANNER */
     .hero-banner {
       background: linear-gradient(135deg, #0d1b2e 0%, #0c2a4a 50%, #0d1b2e 100%);
       border-bottom: 1px solid var(--border);
-      padding: 3.5rem 2rem;
+      padding: 3rem 2rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -90,10 +24,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.18) 0%, transparent 70%);
+      background: radial-gradient(ellipse at 50% 0%, rgba(37,99,235,0.15) 0%, transparent 70%);
     }
     .hero-banner h1 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-size: 2rem;
       font-weight: 700;
       color: #f1f5f9;
       margin-bottom: 0.75rem;
@@ -104,421 +38,38 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       font-size: 1rem;
       position: relative;
     }
-
-    /* MAIN LAYOUT */
-    .main-layout {
-      max-width: 1100px;
+    .posts-wrap {
+      max-width: 900px;
       margin: 0 auto;
       padding: 2.5rem 2rem 4rem;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 3rem;
-      align-items: start;
     }
-    @media (max-width: 900px) {
-      .main-layout { grid-template-columns: 1fr; }
-      .sidebar { display: none; }
-    }
-
-    /* POSTS */
     .section-title {
-      font-size: 0.7rem;
-      font-weight: 700;
+      font-size: 0.75rem;
+      font-weight: 600;
       color: var(--blue-bright);
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
     }
-    .section-title::before {
-      content: '';
-      display: inline-block;
-      width: 3px;
-      height: 14px;
-      background: var(--blue-bright);
-      border-radius: 2px;
-    }
-    .posts-list { display: flex; flex-direction: column; gap: 1.25rem; }
-
-    /* POST CARD */
-    .post-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-      color: inherit;
-    }
-    .post-card:hover {
-      border-color: var(--blue);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(37,99,235,0.15);
-    }
-    @media (max-width: 600px) {
-      .post-card { grid-template-columns: 1fr; }
-      .post-img-wrap { height: 160px; }
-    }
-
-    /* POST IMAGE */
-    .post-img-wrap {
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0c2040, #1a3560);
-    }
-    .post-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s;
-    }
-    .post-card:hover .post-img { transform: scale(1.04); }
-    .post-img-placeholder {
-      width: 100%;
-      height: 100%;
-      min-height: 160px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      opacity: 0.4;
-    }
-
-    /* POST BODY */
-    .post-body {
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .post-top {}
-    .post-tag {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: var(--blue-bright);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.5rem;
-    }
-    .post-title {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #f1f5f9;
-      line-height: 1.35;
-      margin-bottom: 0.6rem;
-      transition: color 0.2s;
-    }
-    .post-card:hover .post-title { color: var(--blue-bright); }
-    .post-excerpt {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .post-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 1rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid var(--border);
-    }
-    .post-date {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-    .post-reading {
-      font-size: 0.72rem;
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-    .post-reading::before { content: '⏱'; font-size: 0.7rem; }
-    .read-more {
-      font-size: 0.75rem;
-      color: var(--blue-bright);
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .read-more::after { content: '→'; }
-
-    /* SIDEBAR */
-    .sidebar {
-      position: sticky;
-      top: 90px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .sidebar-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.25rem;
-    }
-    .sidebar-card h3 {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--blue-bright);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-    .sidebar-card h3::before {
-      content: '';
-      display: inline-block;
-      width: 3px;
-      height: 14px;
-      background: var(--blue-bright);
-      border-radius: 2px;
-    }
-
-    /* NORMATIVA LINKS */
-    .normativa-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .normativa-list li a {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.78rem;
-      line-height: 1.4;
-      padding: 0.4rem 0.5rem;
-      border-radius: 5px;
-      transition: all 0.2s;
-      border: 1px solid transparent;
-    }
-    .normativa-list li a:hover {
-      color: var(--blue-bright);
-      background: rgba(37,99,235,0.08);
-      border-color: rgba(37,99,235,0.2);
-    }
-    .normativa-badge {
-      display: inline-block;
-      background: rgba(6,182,212,0.12);
-      color: var(--accent);
-      border: 1px solid rgba(6,182,212,0.25);
-      border-radius: 3px;
-      font-size: 0.65rem;
-      padding: 0.05rem 0.3rem;
-      font-weight: 600;
-      margin-left: auto;
-      flex-shrink: 0;
-    }
-
-    /* NOTICIAS */
-    .noticias-list {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-    .noticias-list li a {
-      display: block;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.78rem;
-      line-height: 1.4;
-      padding: 0.4rem 0.5rem;
-      border-radius: 5px;
-      border-left: 2px solid var(--border);
-      transition: all 0.2s;
-    }
-    .noticias-list li a:hover {
-      color: var(--blue-bright);
-      border-left-color: var(--blue-bright);
-      background: rgba(59,130,246,0.05);
-    }
-    .noticias-list .source {
-      display: block;
-      font-size: 0.68rem;
-      color: var(--accent);
-      margin-top: 0.2rem;
-      font-weight: 500;
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--navy-light);
-      border-top: 1px solid var(--border);
-      padding: 1.5rem 2rem;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    footer a { color: var(--blue-bright); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
   </style>
-</head>
-<body>
-  <header>
-    <div class="header-inner">
-      <a href="/" class="logo">
-        <img src="/logo-inductech.png" alt="INDUCTECH TRAINING" class="logo-img" onerror="this.style.display='none'" />
-      </a>
-      <nav>
-        <a href="/">Inicio</a>
-        <a href="/blog">Blog</a>
-        <a href="https://www.inductech.cl" target="_blank" rel="noopener">Web</a>
-      </nav>
-    </div>
-  </header>
 
   <div class="hero-banner">
     <h1>Blog Técnico de Ingeniería Eléctrica</h1>
     <p>Normativa IEC · REBT · Instalaciones industriales · Docencia técnica · IA aplicada</p>
   </div>
 
-  <div class="main-layout">
-    <main>
-      <div class="section-title">Artículos Recientes</div>
-      <div class="posts-list">
-        {posts.map((post) => (
-          <a href={`/blog/${post.slug}`} class="post-card">
-            <div class="post-img-wrap">
-              {post.data.heroImage
-                ? <img src={post.data.heroImage} alt={post.data.title} class="post-img" loading="lazy" />
-                : <div class="post-img-placeholder">⚡</div>
-              }
-            </div>
-            <div class="post-body">
-              <div class="post-top">
-                <div class="post-tag">Ingeniería Eléctrica</div>
-                <div class="post-title">{post.data.title}</div>
-                <div class="post-excerpt">{post.data.description}</div>
-              </div>
-              <div class="post-footer">
-                <span class="post-date">{post.data.pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                {post.data.readingTime && <span class="post-reading">{post.data.readingTime} min</span>}
-                <span class="read-more">Leer</span>
-              </div>
-            </div>
-          </a>
-        ))}
-      </div>
-    </main>
-
-    <aside class="sidebar">
-
-      <!-- NORMATIVA CHILENA -->
-      <div class="sidebar-card">
-        <h3>Normativa Eléctrica Chile</h3>
-        <ul class="normativa-list">
-          <li>
-            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/" target="_blank" rel="noopener">
-              <span>⚡</span>
-              <span>Reglamentos SEC — Electricidad</span>
-              <span class="normativa-badge">SEC</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/ric/" target="_blank" rel="noopener">
-              <span>📋</span>
-              <span>RIC — Reglamentos de Instalaciones</span>
-              <span class="normativa-badge">RIC</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.bcn.cl/leychile/navegar?idNorma=1010473" target="_blank" rel="noopener">
-              <span>📜</span>
-              <span>Ley 20.936 — Transmisión Eléctrica</span>
-              <span class="normativa-badge">Ley</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.bcn.cl/leychile/navegar?idNorma=22037" target="_blank" rel="noopener">
-              <span>📜</span>
-              <span>DFL N°4 — Ley General Servicios Eléctricos</span>
-              <span class="normativa-badge">DFL</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.sec.cl/reglamentos-y-normas/electricidad/nseg/" target="_blank" rel="noopener">
-              <span>🔒</span>
-              <span>NSEG — Normas de Seguridad Eléctrica</span>
-              <span class="normativa-badge">NSEG</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://inn.cl/nch-electronica-electrotecnia" target="_blank" rel="noopener">
-              <span>📐</span>
-              <span>NCh Elec 4/2003 — Instalaciones</span>
-              <span class="normativa-badge">NCh</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.cne.cl/normativa/" target="_blank" rel="noopener">
-              <span>🏛️</span>
-              <span>CNE — Comisión Nacional de Energía</span>
-              <span class="normativa-badge">CNE</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- NOTICIAS SECTOR -->
-      <div class="sidebar-card">
-        <h3>Noticias del Sector</h3>
-        <ul class="noticias-list">
-          <li>
-            <a href="https://www.electricidad.cl" target="_blank" rel="noopener">
-              Revista Electricidad — Noticias eléctricas Chile
-              <span class="source">electricidad.cl</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.cne.cl/prensa/noticias/" target="_blank" rel="noopener">
-              Noticias CNE — Política energética
-              <span class="source">cne.cl</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.sec.cl/noticias/" target="_blank" rel="noopener">
-              SEC — Superintendencia Electricidad
-              <span class="source">sec.cl</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://energia.gob.cl/noticias" target="_blank" rel="noopener">
-              Ministerio de Energía — Chile
-              <span class="source">energia.gob.cl</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.coordinador.cl/noticias/" target="_blank" rel="noopener">
-              Coordinador Eléctrico Nacional
-              <span class="source">coordinador.cl</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-    </aside>
+  <div class="posts-wrap">
+    <p class="section-title">Artículos recientes</p>
+    <div class="posts-list">
+      {posts.map((post) => (
+        <PostCard
+          slug={post.slug}
+          title={post.data.title}
+          description={post.data.description}
+          pubDate={post.data.pubDate}
+          heroImage={post.data.heroImage}
+        />
+      ))}
+    </div>
   </div>
-
-  <footer>
-    <p>© {new Date().getFullYear()} <a href="https://www.inductech.cl" target="_blank" rel="noopener">INDUC TECH</a> — Ingeniería Eléctrica · Minería e Industria · Chile</p>
-  </footer>
-</body>
-</html>
+</BaseLayout>

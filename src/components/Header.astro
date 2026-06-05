@@ -1,0 +1,18 @@
+---
+interface Props {
+  activePage?: 'home' | 'blog';
+}
+const { activePage } = Astro.props;
+---
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img class="logo-img" src="/logo-training.png" alt="INDUCTECH TRAINING" />
+    </a>
+    <nav>
+      <a href="/" class={activePage === 'home' ? 'active' : ''}>Inicio</a>
+      <a href="/blog" class={activePage === 'blog' ? 'active' : ''}>Blog</a>
+      <a href="https://www.inductech.cl" target="_blank" rel="noopener">Web</a>
+    </nav>
+  </div>
+</header>

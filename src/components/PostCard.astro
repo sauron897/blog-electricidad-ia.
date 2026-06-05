@@ -1,0 +1,23 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  pubDate: Date;
+  heroImage?: string;
+  tag?: string;
+}
+const { slug, title, description, pubDate, heroImage, tag = 'Ingeniería Eléctrica' } = Astro.props;
+const formattedDate = pubDate.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<a class="post-card" href={`/blog/${slug}`}>
+  {heroImage
+    ? <img class="post-thumb" src={heroImage} alt={title} />
+    : <div class="post-thumb-placeholder">⚡</div>}
+  <div class="post-body">
+    <span class="post-tag">{tag}</span>
+    <span class="post-title">{title}</span>
+    <span class="post-desc">{description}</span>
+    <span class="post-date">{formattedDate}</span>
+  </div>
+</a>
