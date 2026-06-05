@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://blog-electricidad-ia.vercel.app',
-  integrations: [mdx()],
+  site: 'https://www.inductech.cl',
+  integrations: [mdx(), sitemap()],
 });

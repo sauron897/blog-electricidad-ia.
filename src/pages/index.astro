@@ -10,8 +10,46 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog Técnico — INDUC TECH Ingeniería Eléctrica</title>
-  <meta name="description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada." />
+  <title>Blog Técnico de Ingeniería Eléctrica — INDUC TECH</title>
+  <meta name="description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada. INDUC TECH Chile." />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="ingeniería eléctrica, normativa eléctrica Chile, instalaciones eléctricas, IEC, REBT, SEC, docencia técnica" />
+  <link rel="canonical" href="https://www.inductech.cl/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog Técnico de Ingeniería Eléctrica — INDUC TECH" />
+  <meta property="og:description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada. INDUC TECH Chile." />
+  <meta property="og:url" content="https://www.inductech.cl/" />
+  <meta property="og:image" content="https://www.inductech.cl/logo-inductech.png" />
+  <meta property="og:site_name" content="INDUC TECH — Blog de Ingeniería Eléctrica" />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog Técnico de Ingeniería Eléctrica — INDUC TECH" />
+  <meta name="twitter:description" content="Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales y IA aplicada." />
+  <meta name="twitter:image" content="https://www.inductech.cl/logo-inductech.png" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">{JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "INDUC TECH — Blog de Ingeniería Eléctrica",
+    "url": "https://www.inductech.cl",
+    "description": "Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada.",
+    "inLanguage": "es-CL",
+    "publisher": {
+      "@type": "Organization",
+      "name": "INDUC TECH",
+      "url": "https://www.inductech.cl",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.inductech.cl/logo-inductech.png"
+      }
+    }
+  })}</script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
