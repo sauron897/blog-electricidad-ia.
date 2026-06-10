@@ -3,6 +3,24 @@ import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "INDUC TECH — Blog de Ingeniería Eléctrica",
+  "url": "https://www.inductech.cl",
+  "description": "Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada.",
+  "inLanguage": "es-CL",
+  "publisher": {
+    "@type": "Organization",
+    "name": "INDUC TECH",
+    "url": "https://www.inductech.cl",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.inductech.cl/logo-inductech.png"
+    }
+  }
+});
 ---
 
 <!doctype html>
@@ -32,23 +50,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
   <meta name="twitter:image" content="https://www.inductech.cl/logo-inductech.png" />
 
   <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">{JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "INDUC TECH — Blog de Ingeniería Eléctrica",
-    "url": "https://www.inductech.cl",
-    "description": "Artículos técnicos sobre ingeniería eléctrica, normativa IEC/REBT, instalaciones industriales, docencia técnica e IA aplicada.",
-    "inLanguage": "es-CL",
-    "publisher": {
-      "@type": "Organization",
-      "name": "INDUC TECH",
-      "url": "https://www.inductech.cl",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.inductech.cl/logo-inductech.png"
-      }
-    }
-  })}</script>
+  <script type="application/ld+json" set:html={jsonLd} />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

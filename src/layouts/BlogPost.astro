@@ -14,7 +14,8 @@ const formattedDate = pubDate.toLocaleDateString('es-ES', { year: 'numeric', mon
 
 const estimatedTime = readingTime ?? 8;
 const canonicalURL = new URL(Astro.url.pathname, 'https://www.inductech.cl').toString();
-const ogImage = heroImage
+// SVG no es soportado como imagen por redes sociales (OG/Twitter) ni por Google en datos estructurados
+const ogImage = heroImage && !heroImage.endsWith('.svg')
   ? new URL(heroImage, 'https://www.inductech.cl').toString()
   : 'https://www.inductech.cl/logo-inductech.png';
 
