@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bghero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060e1a"/>
+      <stop offset="50%" style="stop-color:#0c2040"/>
+      <stop offset="100%" style="stop-color:#060e1a"/>
+    </linearGradient>
+    <linearGradient id="accentgrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bghero)"/>
+  <!-- Grid lines -->
+  <line x1="0" y1="105" x2="1200" y2="105" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="0" y1="525" x2="1200" y2="525" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="200" y1="0" x2="200" y2="630" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#1e3560" stroke-width="0.5"/>
+  <line x1="1000" y1="0" x2="1000" y2="630" stroke="#1e3560" stroke-width="0.5"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="630" fill="url(#accentgrad)"/>
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="1200" height="5" fill="url(#accentgrad)" opacity="0.6"/>
+
+  <!-- VFD schematic diagram (right side) -->
+  <!-- AC Input -->
+  <rect x="760" y="120" width="80" height="50" rx="4" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="800" y="140" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">RECTIFICADOR</text>
+  <text x="800" y="155" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">3∼ → DC</text>
+  <!-- DC Bus -->
+  <line x1="840" y1="145" x2="900" y2="145" stroke="#f59e0b" stroke-width="2"/>
+  <text x="870" y="135" font-family="Arial,sans-serif" font-size="9" fill="#f59e0b" text-anchor="middle">Bus DC</text>
+  <!-- Inverter IGBT -->
+  <rect x="900" y="120" width="80" height="50" rx="4" fill="none" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="940" y="140" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">INVERSOR</text>
+  <text x="940" y="155" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">IGBT PWM</text>
+  <!-- Output to motor -->
+  <line x1="980" y1="145" x2="1040" y2="145" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="1040" y="120" width="80" height="50" rx="25" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="1080" y="148" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">M 3∼</text>
+
+  <!-- Capacitive leakage arrows -->
+  <line x1="940" y1="170" x2="940" y2="240" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="940,250 935,238 945,238" fill="#ef4444"/>
+  <rect x="870" y="250" width="140" height="30" rx="3" fill="#1a0505" stroke="#ef4444" stroke-width="1"/>
+  <text x="940" y="261" font-family="Arial,sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">I_fuga capacitiva</text>
+  <text x="940" y="274" font-family="Arial,sans-serif" font-size="9" fill="#fca5a5" text-anchor="middle">I = C · dV/dt</text>
+
+  <!-- EMC capacitors symbol -->
+  <line x1="860" y1="195" x2="860" y2="215" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="850" y1="215" x2="870" y2="215" stroke="#2563eb" stroke-width="2"/>
+  <line x1="850" y1="220" x2="870" y2="220" stroke="#2563eb" stroke-width="2"/>
+  <line x1="860" y1="220" x2="860" y2="240" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="890" y="210" font-family="Arial,sans-serif" font-size="9" fill="#93c5fd">C_CEM</text>
+  <line x1="1020" y1="195" x2="1020" y2="215" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="1010" y1="215" x2="1030" y2="215" stroke="#2563eb" stroke-width="2"/>
+  <line x1="1010" y1="220" x2="1030" y2="220" stroke="#2563eb" stroke-width="2"/>
+  <line x1="1020" y1="220" x2="1020" y2="240" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="1040" y="210" font-family="Arial,sans-serif" font-size="9" fill="#93c5fd">C_cable</text>
+  <!-- PE line -->
+  <line x1="760" y1="300" x2="1150" y2="300" stroke="#22c55e" stroke-width="2"/>
+  <text x="765" y="295" font-family="Arial,sans-serif" font-size="10" fill="#22c55e">PE ⏚</text>
+
+  <!-- Frequency drive box outline -->
+  <rect x="750" y="100" width="350" height="220" rx="6" fill="none" stroke="#1e40af" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="925" y="116" font-family="Arial,sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">VARIADOR DE FRECUENCIA (VFD)</text>
+  <text x="925" y="340" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">fc = 2–16 kHz | dV/dt = 1–10 kV/µs</text>
+
+  <!-- RCD Type B symbol -->
+  <rect x="780" y="380" width="60" height="80" rx="4" fill="none" stroke="#a78bfa" stroke-width="2"/>
+  <text x="810" y="400" font-family="Arial,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">ID</text>
+  <text x="810" y="415" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">TIPO B</text>
+  <text x="810" y="432" font-family="Arial,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">IEC 62423</text>
+  <text x="810" y="450" font-family="Arial,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">I_Δn ≥ 300mA</text>
+  <!-- Lines to RCD -->
+  <line x1="760" y1="145" x2="780" y2="145" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="760" y1="145" x2="760" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+  <line x1="760" y1="380" x2="780" y2="380" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Main title -->
+  <text x="40" y="115" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" letter-spacing="3">INDUCTECH TRAINING</text>
+  <line x1="40" y1="124" x2="480" y2="124" stroke="#1d4ed8" stroke-width="1.5"/>
+
+  <text x="40" y="195" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f1f5f9" letter-spacing="-0.5">Corriente de fuga</text>
+  <text x="40" y="245" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#f1f5f9">capacitiva en</text>
+  <text x="40" y="295" font-family="Arial,sans-serif" font-size="36" font-weight="bold" fill="#38bdf8">variadores VFD</text>
+
+  <text x="40" y="355" font-family="Arial,sans-serif" font-size="18" fill="#94a3b8">Diferencial tipo B según IEC 62423</text>
+  <text x="40" y="383" font-family="Arial,sans-serif" font-size="18" fill="#94a3b8">y UNE-EN 62423 · Selección en obra</text>
+
+  <!-- Key values -->
+  <rect x="40" y="430" width="160" height="60" rx="5" fill="#0f172a" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="120" y="452" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">DC alisada detectada</text>
+  <text x="120" y="478" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#38bdf8" text-anchor="middle">≥ 10 mA</text>
+
+  <rect x="215" y="430" width="160" height="60" rx="5" fill="#0f172a" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="295" y="452" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Frec. conmutación IGBT</text>
+  <text x="295" y="478" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">2–16 kHz</text>
+
+  <rect x="390" y="430" width="160" height="60" rx="5" fill="#0f172a" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="470" y="452" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">I_fuga con filtro CEM</text>
+  <text x="470" y="478" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">50–300 mA</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="590" width="1200" height="40" fill="#060e1a" opacity="0.9"/>
+  <line x1="0" y1="590" x2="1200" y2="590" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="600" y="612" font-family="Arial,sans-serif" font-size="11" fill="#475569" text-anchor="middle">inductech-training.com · Blog técnico de ingeniería eléctrica · IEC 62423 · REBT ITC-BT-24</text>
+</svg>

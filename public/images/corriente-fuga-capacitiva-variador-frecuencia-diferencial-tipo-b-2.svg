@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060e1a"/>
+      <stop offset="50%" style="stop-color:#0c2040"/>
+      <stop offset="100%" style="stop-color:#060e1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="520" fill="url(#bg2)"/>
+  <rect width="1000" height="520" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="7" height="520" fill="#2563eb" opacity="0.8" rx="2"/>
+
+  <!-- Title -->
+  <text x="500" y="34" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#f1f5f9" text-anchor="middle">¿Por qué el variador genera corriente de fuga? — Mecanismo físico</text>
+  <text x="500" y="52" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">I_fuga = C_tierra × dV/dt · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="975" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Red AC input (3-phase) -->
+  <text x="60" y="105" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#94a3b8" text-anchor="middle">RED AC</text>
+  <text x="60" y="120" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">400 V 3∼</text>
+  <!-- L1, L2, L3 lines -->
+  <line x1="100" y1="100" x2="170" y2="100" stroke="#ef4444" stroke-width="2"/>
+  <line x1="100" y1="115" x2="170" y2="115" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="100" y1="130" x2="170" y2="130" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- Rectifier block -->
+  <rect x="170" y="85" width="90" height="60" rx="4" fill="#0c1f3a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="215" y="108" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">RECTIFICADOR</text>
+  <text x="215" y="124" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">PUENTE</text>
+  <text x="215" y="138" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">DIODOS</text>
+
+  <!-- DC Bus -->
+  <line x1="260" y1="100" x2="330" y2="100" stroke="#f59e0b" stroke-width="2.5"/>
+  <line x1="260" y1="130" x2="330" y2="130" stroke="#374151" stroke-width="2.5"/>
+  <!-- Capacitor -->
+  <line x1="295" y1="100" x2="295" y2="110" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="280" y1="110" x2="310" y2="110" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="280" y1="115" x2="310" y2="115" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="295" y1="115" x2="295" y2="130" stroke="#f59e0b" stroke-width="2"/>
+  <text x="315" y="112" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24">C_DC</text>
+  <text x="295" y="80" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Bus DC</text>
+
+  <!-- Inverter IGBT block -->
+  <rect x="330" y="85" width="100" height="60" rx="4" fill="#0c1f3a" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="380" y="108" font-family="Arial,sans-serif" font-size="10" fill="#c4b5fd" text-anchor="middle">INVERSOR</text>
+  <text x="380" y="122" font-family="Arial,sans-serif" font-size="9" fill="#c4b5fd" text-anchor="middle">6× IGBT</text>
+  <text x="380" y="136" font-family="Arial,sans-serif" font-size="9" fill="#a78bfa" text-anchor="middle">fc = 2–16 kHz</text>
+
+  <!-- Output cable -->
+  <line x1="430" y1="100" x2="530" y2="100" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="430" y1="112" x2="530" y2="112" stroke="#e2e8f0" stroke-width="2"/>
+  <line x1="430" y1="124" x2="530" y2="124" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="480" y="80" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Cable motor (apantallado)</text>
+  <!-- Cable cross section indicator -->
+  <rect x="468" y="85" width="24" height="20" rx="2" fill="none" stroke="#64748b" stroke-width="1"/>
+  <circle cx="474" cy="91" r="2" fill="#ef4444"/>
+  <circle cx="480" cy="91" r="2" fill="#f59e0b"/>
+  <circle cx="486" cy="91" r="2" fill="#3b82f6"/>
+  <circle cx="480" cy="99" r="2.5" fill="#22c55e"/>
+
+  <!-- Motor -->
+  <circle cx="570" cy="112" r="35" fill="none" stroke="#22c55e" stroke-width="2"/>
+  <text x="570" y="107" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">M</text>
+  <text x="570" y="122" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">3∼</text>
+
+  <!-- PE ground line -->
+  <line x1="60" y1="200" x2="940" y2="200" stroke="#22c55e" stroke-width="2.5"/>
+  <text x="70" y="195" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#22c55e">PE ⏚</text>
+  <!-- Ground symbol -->
+  <line x1="900" y1="200" x2="900" y2="215" stroke="#22c55e" stroke-width="2"/>
+  <line x1="885" y1="215" x2="915" y2="215" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="890" y1="220" x2="910" y2="220" stroke="#22c55e" stroke-width="2"/>
+  <line x1="895" y1="225" x2="905" y2="225" stroke="#22c55e" stroke-width="2"/>
+
+  <!-- Capacitive leakage path 1: EMC filter caps -->
+  <text x="215" y="165" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#fca5a5" text-anchor="middle">Filtro CEM/RFI</text>
+  <line x1="200" y1="145" x2="200" y2="170" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="190" y1="170" x2="210" y2="170" stroke="#ef4444" stroke-width="2.5"/>
+  <line x1="190" y1="175" x2="210" y2="175" stroke="#ef4444" stroke-width="2.5"/>
+  <line x1="200" y1="175" x2="200" y2="200" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="225" y="175" font-family="Arial,sans-serif" font-size="9" fill="#fca5a5">C = 1–5 µF</text>
+  <text x="225" y="188" font-family="Arial,sans-serif" font-size="9" fill="#fca5a5">I_fuga = 50–300 mA</text>
+
+  <!-- Capacitive leakage path 2: cable parasitic -->
+  <line x1="480" y1="147" x2="480" y2="170" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="470" y1="170" x2="490" y2="170" stroke="#f97316" stroke-width="2.5"/>
+  <line x1="470" y1="175" x2="490" y2="175" stroke="#f97316" stroke-width="2.5"/>
+  <line x1="480" y1="175" x2="480" y2="200" stroke="#f97316" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="500" y="165" font-family="Arial,sans-serif" font-size="9" fill="#fdba74">C_cable = 0,3–0,5 nF/m</text>
+  <text x="500" y="178" font-family="Arial,sans-serif" font-size="9" fill="#fdba74">50 m → 75–125 mA pico</text>
+
+  <!-- PWM waveform -->
+  <text x="380" y="255" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Tensión de salida PWM — dV/dt = 1–10 kV/µs</text>
+  <polyline points="270,320 270,270 310,270 310,320 350,320 350,270 390,270 390,320 430,320 430,270 470,270 470,320 510,320 510,270 550,270 550,320 590,320" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+  <line x1="250" y1="295" x2="620" y2="295" stroke="#1e3560" stroke-width="1"/>
+  <line x1="265" y1="260" x2="265" y2="335" stroke="#64748b" stroke-width="1"/>
+  <text x="255" y="275" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">+560V</text>
+  <text x="255" y="320" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">  0V</text>
+  <text x="255" y="340" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8">–560V</text>
+  <!-- dV/dt annotation -->
+  <line x1="310" y1="265" x2="340" y2="265" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="345" y="263" font-family="Arial,sans-serif" font-size="9" fill="#ef4444">dV/dt</text>
+
+  <!-- Leakage current waveform -->
+  <text x="830" y="255" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fca5a5" text-anchor="middle">Corriente de fuga resultante</text>
+  <polyline points="660,320 680,270 700,320 710,295 720,315 735,280 750,320 760,295 770,310 785,275 800,320 810,300 820,315 840,280 860,320 870,300 880,310 895,270 910,320" fill="none" stroke="#ef4444" stroke-width="2"/>
+  <line x1="645" y1="295" x2="940" y2="295" stroke="#1e3560" stroke-width="1"/>
+  <line x1="650" y1="260" x2="650" y2="335" stroke="#64748b" stroke-width="1"/>
+  <text x="638" y="263" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="end">AC alta f</text>
+  <text x="638" y="278" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="end">+ CC alisada</text>
+  <text x="638" y="293" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="end">+ CC pulsante</text>
+  <!-- DC component line -->
+  <line x1="660" y1="305" x2="910" y2="305" stroke="#f59e0b" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="920" y="308" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24">I_DC</text>
+
+  <!-- Legend -->
+  <rect x="25" y="380" width="950" height="120" rx="5" fill="#060e1a" stroke="#1e3560" stroke-width="1"/>
+  <text x="500" y="400" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#e2e8f0" text-anchor="middle">Componentes de la corriente de fuga y capacidad de detección por tipo de diferencial</text>
+  <line x1="40" y1="408" x2="960" y2="408" stroke="#1e3560" stroke-width="0.5"/>
+
+  <!-- Component indicators -->
+  <rect x="40" y="420" width="14" height="14" fill="#3b82f6" rx="2"/>
+  <text x="62" y="432" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">AC sinusoidal 50 Hz</text>
+  <text x="62" y="446" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Detectado por: AC · A · F · B</text>
+
+  <rect x="250" y="420" width="14" height="14" fill="#8b5cf6" rx="2"/>
+  <text x="272" y="432" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">CC pulsante (semiciclo)</text>
+  <text x="272" y="446" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Detectado por: A · F · B</text>
+
+  <rect x="460" y="420" width="14" height="14" fill="#ef4444" rx="2"/>
+  <text x="482" y="432" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">AC alta frecuencia (&gt;1 kHz)</text>
+  <text x="482" y="446" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Detectado por: F · B</text>
+
+  <rect x="680" y="420" width="14" height="14" fill="#f59e0b" rx="2"/>
+  <text x="702" y="432" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">CC alisada continua</text>
+  <text x="702" y="446" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Detectado por: B únicamente</text>
+
+  <line x1="40" y1="458" x2="960" y2="458" stroke="#1e3560" stroke-width="0.5"/>
+  <text x="500" y="480" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">El tipo AC y A son ciegos a CC alisada → en presencia de 6 mA DC, el umbral de disparo del tipo A puede duplicarse (IEC 61008-1)</text>
+  <text x="500" y="495" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Resultado: diferencial AC/A no protege al usuario en circuitos con variadores de frecuencia trifásicos</text>
+</svg>
