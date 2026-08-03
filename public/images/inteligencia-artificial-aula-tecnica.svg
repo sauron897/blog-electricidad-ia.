@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#1a0a2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgai)"/>
+  <rect width="1200" height="630" fill="none" stroke="#1e3560" stroke-width="1"/>
+  <rect x="0" y="0" width="10" height="630" fill="#7c3aed" opacity="0.8"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#7c3aed" opacity="0.5"/>
+
+  <!-- Decorative -->
+  <line x1="650" y1="0" x2="650" y2="630" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="6,10"/>
+  <circle cx="950" cy="315" r="220" fill="none" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="4,8"/>
+  <circle cx="950" cy="315" r="150" fill="none" stroke="#1e3560" stroke-width="0.3" stroke-dasharray="2,6"/>
+
+  <!-- Left: Title -->
+  <text x="60" y="110" font-family="Arial,sans-serif" font-size="13" fill="#7c3aed" letter-spacing="3">INDUCTECH TRAINING · IA APLICADA</text>
+  <text x="60" y="178" font-family="Arial,sans-serif" font-size="50" font-weight="bold" fill="#f1f5f9">IA en el</text>
+  <text x="60" y="238" font-family="Arial,sans-serif" font-size="50" font-weight="bold" fill="#f1f5f9">Aula Técnica</text>
+  <text x="60" y="300" font-family="Arial,sans-serif" font-size="34" font-weight="bold" fill="#a78bfa">Guía para Docentes</text>
+  <text x="60" y="342" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#a78bfa">de FP Eléctrica</text>
+  <text x="60" y="390" font-family="Arial,sans-serif" font-size="17" fill="#94a3b8">Herramientas, casos de uso y limitaciones reales</text>
+  <text x="60" y="415" font-family="Arial,sans-serif" font-size="14" fill="#64748b">IEC 60364 · REBT · GElectrical · Claude · GPT-4o</text>
+
+  <line x1="60" y1="442" x2="580" y2="442" stroke="#7c3aed" stroke-width="2"/>
+
+  <rect x="60" y="460" width="130" height="26" rx="13" fill="#2d1b69"/>
+  <text x="125" y="477" font-family="Arial,sans-serif" font-size="11" fill="#c4b5fd" text-anchor="middle">LLMs técnicos</text>
+  <rect x="202" y="460" width="130" height="26" rx="13" fill="#2d1b69"/>
+  <text x="267" y="477" font-family="Arial,sans-serif" font-size="11" fill="#c4b5fd" text-anchor="middle">FP Electrotécnica</text>
+  <rect x="344" y="460" width="125" height="26" rx="13" fill="#2d1b69"/>
+  <text x="406" y="477" font-family="Arial,sans-serif" font-size="11" fill="#c4b5fd" text-anchor="middle">DigCompEdu</text>
+
+  <!-- Right: reliability table -->
+  <rect x="668" y="60" width="502" height="540" rx="10" fill="#081426" stroke="#1e3560" stroke-width="1"/>
+  <text x="919" y="95" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="middle">FIABILIDAD DEL LLM POR TIPO DE TAREA</text>
+  <line x1="678" y1="105" x2="1160" y2="105" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Table header row -->
+  <rect x="678" y="112" width="482" height="28" rx="3" fill="#1e1b4b"/>
+  <text x="780" y="130" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Tipo de consulta</text>
+  <text x="965" y="130" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Fiabilidad</text>
+  <text x="1100" y="130" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Riesgo</text>
+
+  <!-- Row 1 - Alta -->
+  <rect x="678" y="140" width="482" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="690" y="156" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Explicar conceptos físicos (Ley de Ohm, RLC)</text>
+  <text x="690" y="170" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Fundamentos de circuitos, potencia, factor de potencia</text>
+  <rect x="920" y="147" width="80" height="22" rx="11" fill="#14532d"/>
+  <text x="960" y="162" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#4ade80" text-anchor="middle">Alta</text>
+  <text x="1100" y="162" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">Ninguno</text>
+
+  <!-- Row 2 - Media-Alta -->
+  <rect x="678" y="176" width="482" height="36" rx="2" fill="#081426"/>
+  <text x="690" y="192" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Interpretar artículos normativos (ITC-BT, IEC 60364)</text>
+  <text x="690" y="206" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Verificar ed. vigente · preguntas de aplicación concreta</text>
+  <rect x="905" y="183" width="110" height="22" rx="11" fill="#1e3a1e"/>
+  <text x="960" y="198" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac" text-anchor="middle">Media-Alta</text>
+  <text x="1100" y="198" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Ed. antigua</text>
+
+  <!-- Row 3 - Media -->
+  <rect x="678" y="212" width="482" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="690" y="228" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Calcular secciones / calibres con datos concretos</text>
+  <text x="690" y="242" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Iz, ΔU, Icc · aplicar factores de corrección kt y ka</text>
+  <rect x="920" y="219" width="80" height="22" rx="11" fill="#451a03"/>
+  <text x="960" y="234" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#fbbf24" text-anchor="middle">Media</text>
+  <text x="1100" y="234" font-family="Arial,sans-serif" font-size="10" fill="#f59e0b" text-anchor="middle">Aritmética</text>
+
+  <!-- Row 4 - Baja -->
+  <rect x="678" y="248" width="482" height="36" rx="2" fill="#081426"/>
+  <text x="690" y="264" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Diseñar esquemas de protección con selectividad</text>
+  <text x="690" y="278" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Coordinación diferencial-magnetotérmico · curvas de disparo</text>
+  <rect x="920" y="255" width="80" height="22" rx="11" fill="#7f1d1d"/>
+  <text x="960" y="270" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#f87171" text-anchor="middle">Baja</text>
+  <text x="1100" y="270" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="middle">Omisiones</text>
+
+  <!-- Row 5 - No apto -->
+  <rect x="678" y="284" width="482" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="690" y="300" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Verificar conformidad de instalación real</text>
+  <text x="690" y="314" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Medidas reales · certificación · inspección</text>
+  <rect x="900" y="291" width="120" height="22" rx="11" fill="#450a0a"/>
+  <text x="960" y="306" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">No apto</text>
+  <text x="1100" y="306" font-family="Arial,sans-serif" font-size="10" fill="#dc2626" text-anchor="middle">Crítico</text>
+
+  <line x1="678" y1="325" x2="1160" y2="325" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Tool selection -->
+  <text x="919" y="350" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="middle">SELECCIÓN DE HERRAMIENTA POR TAREA</text>
+
+  <rect x="678" y="358" width="482" height="30" rx="2" fill="#081426"/>
+  <text x="690" y="377" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Texto técnico / rúbricas / materiales didácticos</text>
+  <text x="1145" y="377" font-family="Arial,sans-serif" font-size="10" fill="#a78bfa" text-anchor="end">Claude · GPT-4o</text>
+
+  <rect x="678" y="388" width="482" height="30" rx="2" fill="#0c1f3a"/>
+  <text x="690" y="407" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Cálculo de cortocircuito IEC 60909-0 / secciones IEC 60364-5-52</text>
+  <text x="1145" y="407" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="end">GElectrical · ETAP</text>
+
+  <rect x="678" y="418" width="482" height="30" rx="2" fill="#081426"/>
+  <text x="690" y="437" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Imágenes técnicas / presentaciones / esquemas</text>
+  <text x="1145" y="437" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="end">Revisar simbología UNE-EN 60617</text>
+
+  <rect x="678" y="448" width="482" height="30" rx="2" fill="#0c1f3a"/>
+  <text x="690" y="467" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Normativa actualizada (&lt; 18 meses)</text>
+  <text x="1145" y="467" font-family="Arial,sans-serif" font-size="10" fill="#ef4444" text-anchor="end">Fuente primaria (AENOR / IEC e-tech)</text>
+
+  <!-- Key rule -->
+  <rect x="678" y="488" width="482" height="98" rx="6" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1"/>
+  <text x="919" y="510" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">REGLA FUNDAMENTAL</text>
+  <text x="690" y="530" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">El LLM es el asistente de interpretación.</text>
+  <text x="690" y="548" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">El motor de cálculo certificado sigue siendo la herramienta específica.</text>
+  <text x="690" y="568" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8">Cualquier valor numérico con impacto en seguridad → verificar en fuente normativa.</text>
+  <text x="690" y="580" font-family="Arial,sans-serif" font-size="9" fill="#64748b">DigCompEdu área 2 · Ley FP 3/2022 art. 40 · Marco competencia digital</text>
+
+  <!-- Footer -->
+  <text x="600" y="620" font-family="Arial,sans-serif" font-size="10" fill="#4a6a8a" text-anchor="middle">INDUC TECH · IA en aula técnica · FP Electrotécnica · DigCompEdu 2024</text>
+</svg>

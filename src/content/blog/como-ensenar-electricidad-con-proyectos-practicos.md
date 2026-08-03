@@ -3,7 +3,7 @@ title: "Enseñar electricidad con proyectos prácticos: guía técnica"
 description: "Metodología ABP para docentes de FP Electrotécnica: estructura de proyectos prácticos con parámetros REBT, IEC 60364 y criterios de verificación reales en aula-taller."
 pubDate: 2026-07-20
 keywords: ["enseñar electricidad proyectos", "ABP electrotécnica FP", "proyectos prácticos electricidad taller", "ITC-BT verificación instalación aula", "metodología electricidad técnicos"]
-heroImage: /images/como-ensenar-electricidad-con-proyectos-practicos.jpg
+heroImage: /images/como-ensenar-electricidad-con-proyectos-practicos.svg
 author: "Editor"
 ---
 
@@ -13,7 +13,7 @@ El objetivo de cada proyecto no es que el alumno "aprenda haciendo" en sentido v
 
 ## Fundamentos del ABP aplicado a instalaciones eléctricas
 
-![Ilustración técnica](/images/como-ensenar-electricidad-con-proyectos-practicos-2.jpg)
+![Verificación instrumental en taller según IEC 60364-6](/images/como-ensenar-electricidad-con-proyectos-practicos-2.svg)
 
 El ABP en electrotécnica tiene una diferencia crítica respecto al ABP genérico: el producto entregable del alumno debe ser **verificable instrumentalmente**. No basta con que el circuito funcione — debe cumplir:
 
@@ -147,7 +147,7 @@ Resistencia entre el borne de tierra del cuadro y cada masa metálica accesible:
 
 ## Criterios de diseño de un proyecto pedagógicamente eficaz
 
-![Guía de selección](/images/como-ensenar-electricidad-con-proyectos-practicos-3.jpg)
+![Criterios para proyectos prácticos en FP Eléctrica](/images/como-ensenar-electricidad-con-proyectos-practicos-3.svg)
 
 Un proyecto de taller es eficaz cuando obliga al alumno a tomar decisiones técnicas justificadas. Criterios para el docente:
 

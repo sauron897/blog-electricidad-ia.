@@ -4,6 +4,7 @@ description: "Guía técnica para instaladores: dimensionado de strings, secció
 pubDate: 2026-07-22
 keywords: ["instalacion fotovoltaica domestica", "IEC 62548 cable fotovoltaico", "dimensionado string fotovoltaico", "autoconsumo fotovoltaico normativa"]
 author: "Editor"
+heroImage: /images/instalacion-fotovoltaica-domestica-paso-a-paso.svg
 ---
 
 Una instalación fotovoltaica de autoconsumo doméstico no es un conjunto de paneles en el tejado: es un sistema eléctrico de generación que opera en paralelo con la red de distribución y que está sujeto a los mismos principios de diseño —y a más normativa específica— que cualquier instalación de baja tensión. El Real Decreto 244/2019 y la norma técnica **UNE-HD 60364-7-712** (transposición de IEC 60364-7-712) son el marco de referencia en España, y su correcta aplicación es lo que separa una instalación segura y legalizable de una que falla el primer verano o genera problemas con la distribuidora.
@@ -49,6 +50,8 @@ La **tensión mínima de string** verifica el arranque del MPPT en verano. Con t
 - Vmpp a 65 °C = 34,2 x [1 + (-0,0040) x (65 - 25)] = 34,2 x 0,84 = **28,7 V por módulo**
 
 Este valor multiplicado por el número de módulos en serie debe quedar dentro del rango MPPT del inversor (habitualmente 150-560 V en monofásicos de 5 kW).
+
+![Cálculo de string FV: tensión y corriente DC según IEC 62548](/images/instalacion-fotovoltaica-domestica-2.svg)
 
 ## Sección de cable DC y AC según IEC 62548
 
@@ -112,6 +115,8 @@ Los inversores de string **transformerless** (la mayoría de los actuales) puede
 ### Protección de sobretensiones (SPD)
 
 La **UNE-HD 60364-7-712** requiere evaluación del riesgo de sobretensión. En zonas con nivel keraunoico medio-alto, se instalan descargadores **tipo II** (varistores SPD) tanto en el lado DC (entre positivo/negativo y tierra) como en el lado AC, en la caja de protecciones del generador.
+
+![Protecciones FV: criterios de selección por elemento](/images/instalacion-fotovoltaica-domestica-3.svg)
 
 ## Criterios de selección aplicables en obra
 

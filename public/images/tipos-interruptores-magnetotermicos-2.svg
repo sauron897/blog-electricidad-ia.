@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#bg4)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#2563eb" opacity="0.7" rx="2"/>
+
+  <!-- Header -->
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Guía de selección — Curvas B, C y D</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">IEC 60898-1 · ITC-BT-22 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <rect x="25" y="70" width="850" height="32" rx="4" fill="#0c1f3a"/>
+  <text x="90" y="91" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#94a3b8" text-anchor="middle">Criterio</text>
+  <text x="290" y="91" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#ef4444" text-anchor="middle">CURVA B</text>
+  <text x="510" y="91" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#3b82f6" text-anchor="middle">CURVA C</text>
+  <text x="730" y="91" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">CURVA D</text>
+
+  <!-- Disparo magnético row -->
+  <rect x="25" y="102" width="850" height="38" rx="2" fill="#081426"/>
+  <text x="90" y="117" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Disparo</text>
+  <text x="90" y="131" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">magnético</text>
+  <rect x="178" y="108" width="224" height="26" rx="4" fill="#7f1d1d" fill-opacity="0.5"/>
+  <text x="290" y="125" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#ef4444" text-anchor="middle">3 × In — 5 × In</text>
+  <rect x="398" y="108" width="224" height="26" rx="4" fill="#1e3a8a" fill-opacity="0.5"/>
+  <text x="510" y="125" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#3b82f6" text-anchor="middle">5 × In — 10 × In</text>
+  <rect x="618" y="108" width="224" height="26" rx="4" fill="#14532d" fill-opacity="0.5"/>
+  <text x="730" y="125" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#22c55e" text-anchor="middle">10 × In — 20 × In</text>
+
+  <!-- Type of load row -->
+  <rect x="25" y="140" width="850" height="56" rx="2" fill="#0c1f3a"/>
+  <text x="90" y="160" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Tipo de</text>
+  <text x="90" y="174" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">carga</text>
+  <text x="290" y="158" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">Resistiva / alumbrado LED</text>
+  <text x="290" y="173" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">Fluorescente / señalización</text>
+  <text x="290" y="188" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">Líneas largas baja Icc</text>
+  <text x="510" y="158" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Tomas uso general</text>
+  <text x="510" y="173" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Pequeños motores (&lt; 2 kW)</text>
+  <text x="510" y="188" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Circuitos mixtos / doméstico</text>
+  <text x="730" y="158" font-family="Arial,sans-serif" font-size="10" fill="#86efac" text-anchor="middle">Motores arranque directo</text>
+  <text x="730" y="173" font-family="Arial,sans-serif" font-size="10" fill="#86efac" text-anchor="middle">Transformadores / UPS</text>
+  <text x="730" y="188" font-family="Arial,sans-serif" font-size="10" fill="#86efac" text-anchor="middle">Electroimanes / solenoides</text>
+
+  <!-- Icc mínima row -->
+  <rect x="25" y="196" width="850" height="40" rx="2" fill="#081426"/>
+  <text x="90" y="212" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Icc mínima</text>
+  <text x="90" y="226" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">requerida</text>
+  <text x="290" y="218" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">&gt; 3 × In garantizado</text>
+  <text x="290" y="231" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(baja Icc aceptable)</text>
+  <text x="510" y="218" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">&gt; 5 × In garantizado</text>
+  <text x="510" y="231" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(uso estándar)</text>
+  <text x="730" y="218" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">&gt; 10 × In garantizado</text>
+  <text x="730" y="231" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">⚠ verificar siempre</text>
+
+  <!-- Error frecuente row -->
+  <rect x="25" y="236" width="850" height="40" rx="2" fill="#0c1f3a"/>
+  <text x="90" y="252" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Error</text>
+  <text x="90" y="266" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">frecuente</text>
+  <text x="290" y="252" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">Instalarlo con motores:</text>
+  <text x="290" y="266" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">disparo intempestivo arranque</text>
+  <text x="510" y="252" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Usarlo con motores &gt; 3 kW:</text>
+  <text x="510" y="266" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">riesgo de no-disparo arranque</text>
+  <text x="730" y="252" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Baja Icc en el punto:</text>
+  <text x="730" y="266" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">magnético no actúa en cc</text>
+
+  <!-- Calibres típicos row -->
+  <rect x="25" y="276" width="850" height="38" rx="2" fill="#081426"/>
+  <text x="90" y="292" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Calibres</text>
+  <text x="90" y="306" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">habituales</text>
+  <text x="290" y="298" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">6 – 10 – 16 A</text>
+  <text x="510" y="298" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">10 – 16 – 20 – 25 – 32 A</text>
+  <text x="730" y="298" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">10 – 16 – 25 – 32 A</text>
+
+  <!-- Condición Ib-In-Iz row -->
+  <rect x="25" y="314" width="850" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="90" y="330" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">Condición</text>
+  <text x="90" y="344" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#64748b" text-anchor="middle">obligatoria</text>
+  <text x="510" y="334" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#60a5fa" text-anchor="middle">Ib ≤ In ≤ Iz    y    I₂ ≤ 1,45 × Iz</text>
+  <text x="510" y="346" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">aplica a las tres curvas · art. 4 ITC-BT-22</text>
+
+  <!-- Decision aid box -->
+  <rect x="25" y="360" width="850" height="85" rx="6" fill="#0a1628" stroke="#1e3560" stroke-width="1"/>
+  <text x="454" y="378" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#94a3b8" text-anchor="middle">Criterio de decisión rápida</text>
+  <text x="35" y="397" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">¿Carga con arranque &gt; 8 × In?</text>
+  <text x="220" y="397" font-family="Arial,sans-serif" font-size="11" fill="#22c55e">→ Curva D</text>
+  <text x="340" y="397" font-family="Arial,sans-serif" font-size="11" fill="#64748b">|</text>
+  <text x="355" y="397" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">¿Arranque moderado o sin arranque?</text>
+  <text x="605" y="397" font-family="Arial,sans-serif" font-size="11" fill="#3b82f6">→ Curva C</text>
+  <text x="680" y="397" font-family="Arial,sans-serif" font-size="11" fill="#64748b">|</text>
+  <text x="695" y="397" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">¿Línea larga resistiva?</text>
+  <text x="855" y="397" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="end">→ Curva B</text>
+  <text x="35" y="418" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Verifica siempre Icc_min &gt; umbral magnético · IEC 60898-1 tabla 3 · ITC-BT-22 art. 2</text>
+  <text x="35" y="436" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Poder de corte (Icu): mínimo 6 kA en uso doméstico (IEC 60898-1) · hasta 50 kA en industrial (IEC 60947-2)</text>
+
+  <!-- Footer -->
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Selección magnetotérmico · IEC 60898-1 · ITC-BT-22</text>
+</svg>

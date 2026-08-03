@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgerr2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="50%" style="stop-color:#2a0c0c"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgerr2)"/>
+  <rect width="900" height="480" fill="none" stroke="#7f1d1d" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#ef4444" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Diagnóstico en campo — Verificaciones mínimas REBT</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">IEC 60364-6 · ITC-BT-19 · ITC-BT-24 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#7f1d1d" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="25" y="70" width="850" height="30" rx="4" fill="#7f1d1d"/>
+  <text x="140" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Verificación</text>
+  <text x="310" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Instrumento</text>
+  <text x="490" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Valor límite normativo</text>
+  <text x="710" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Norma / Error si falla</text>
+
+  <!-- Row 1: Resistencia aislamiento -->
+  <rect x="25" y="100" width="850" height="42" rx="2" fill="#1a0a0a"/>
+  <text x="140" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Resistencia de aislamiento</text>
+  <text x="140" y="132" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ris entre activos y PE</text>
+  <text x="310" y="122" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Megóhmetro 500 V DC</text>
+  <text x="490" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">≥ 0,5 MΩ (BT ≤ 500 V)</text>
+  <text x="490" y="132" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">≥ 1 MΩ (locales húmedos)</text>
+  <text x="710" y="122" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">IEC 60364-6 tabla 6A · derivación a tierra</text>
+
+  <!-- Row 2: Continuidad PE -->
+  <rect x="25" y="142" width="850" height="42" rx="2" fill="#0d1626"/>
+  <text x="140" y="157" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Continuidad conductor PE</text>
+  <text x="140" y="174" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">hasta punto más alejado</text>
+  <text x="310" y="164" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Ohmímetro de baja resistencia</text>
+  <text x="490" y="157" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">≤ 1 Ω</text>
+  <text x="490" y="174" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Corriente prueba ≥ 200 mA</text>
+  <text x="710" y="164" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">ITC-BT-19 §2.2.4 · fallo PE = riesgo contacto</text>
+
+  <!-- Row 3: Bucle de fallo -->
+  <rect x="25" y="184" width="850" height="42" rx="2" fill="#1a0a0a"/>
+  <text x="140" y="199" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Impedancia bucle fallo</text>
+  <text x="140" y="216" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Zs en punto más lejano</text>
+  <text x="310" y="204" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Medidor de bucle IEC 61557-3</text>
+  <text x="490" y="199" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Zs ≤ Uo / Ia</text>
+  <text x="490" y="216" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Ia = 5×In curva C · Uo = 230 V</text>
+  <text x="710" y="204" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">IEC 60364-4-41 · disparo lento = peligro</text>
+
+  <!-- Row 4: Diferencial -->
+  <rect x="25" y="226" width="850" height="42" rx="2" fill="#0d1626"/>
+  <text x="140" y="241" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Disparo diferencial</text>
+  <text x="140" y="258" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">1×IΔn y 5×IΔn</text>
+  <text x="310" y="248" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Comprobador de diferenciales</text>
+  <text x="490" y="241" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">1×IΔn: disparo ≤ 300 ms</text>
+  <text x="490" y="258" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">5×IΔn: disparo ≤ 40 ms</text>
+  <text x="710" y="248" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">IEC 61008-1 · diferencial no activo = peligro</text>
+
+  <!-- Row 5: Tensión y polaridad -->
+  <rect x="25" y="268" width="850" height="42" rx="2" fill="#1a0a0a"/>
+  <text x="140" y="283" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Tensión y polaridad</text>
+  <text x="140" y="300" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">en cada toma y cuadro</text>
+  <text x="310" y="290" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Multímetro calibrado</text>
+  <text x="490" y="283" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">230 V ±10% · L-N correcto</text>
+  <text x="490" y="300" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Verificar N-PE ≤ 3 V en reposo</text>
+  <text x="710" y="290" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">RD 1955/2000 · polaridad invertida = error grave</text>
+
+  <!-- Row 6: Sección cable -->
+  <rect x="25" y="310" width="850" height="30" rx="2" fill="#0d1626"/>
+  <text x="140" y="329" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Sección mínima circuitos</text>
+  <text x="310" y="329" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Calibre + verificación visual</text>
+  <text x="490" y="329" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">≥ 1,5 mm² (iluminación) · ≥ 2,5 mm² (tomas)</text>
+  <text x="710" y="329" font-family="Arial,sans-serif" font-size="10" fill="#fca5a5" text-anchor="middle">ITC-BT-25 · infrasección = sobrecalentamiento</text>
+
+  <!-- Summary box -->
+  <rect x="25" y="353" width="850" height="90" rx="6" fill="#0a1628" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="454" y="377" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Regla de diagnóstico — Medir antes de concluir</text>
+  <text x="45" y="400" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Un error no confirmado instrumentalmente es una hipótesis, no un diagnóstico. La norma IEC 60364-6 exige</text>
+  <text x="45" y="418" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">un acta con instrumento usado, valor medido, valor límite y fecha. Sin acta no hay verificación válida.</text>
+  <text x="45" y="436" font-family="Arial,sans-serif" font-size="10" fill="#64748b">IEC 60364-6:2016 §6 — ensayos y mediciones antes de la puesta en servicio · ITC-BT-05 (verificaciones)</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Diagnóstico instalaciones · IEC 60364-6 · ITC-BT-19/24</text>
+</svg>

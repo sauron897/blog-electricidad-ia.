@@ -22,7 +22,7 @@ El artículo 2 de ITC-BT-19 obliga a verificar simultáneamente:
 
 La sección final es la mayor de las tres resultantes, redondeada al calibre comercial normalizado inmediatamente superior (1,5 / 2,5 / 4 / 6 / 10 / 16 / 25 / 35 / 50 mm²).
 
-![Ilustración técnica: tres criterios de selección de sección](/images/calculo-seccion-cable-electrico-2.png)
+![Ilustración técnica: tres criterios de selección de sección](/images/calculo-seccion-cable-electrico-2.svg)
 
 ---
 
@@ -186,7 +186,7 @@ Sección por criterio de cortocircuito: **3,7 mm²** → tampoco domina.
 
 ---
 
-![Guía de selección de cable en obra](/images/calculo-seccion-cable-electrico-3.png)
+![Guía de selección de cable en obra](/images/calculo-seccion-cable-electrico-3.svg)
 
 ## Criterios de selección en obra: guía de decisión rápida
 

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgfv2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1f0a"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgfv2)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#16a34a" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Cálculo de string FV — Tensión y corriente DC</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">IEC 62548 · UNE-HD 60364-7-712 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Formulas section -->
+  <rect x="25" y="72" width="415" height="290" rx="8" fill="#0c1f3a" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="25" y="72" width="415" height="36" rx="8" fill="#14532d"/>
+  <rect x="25" y="94" width="415" height="14" fill="#14532d"/>
+  <text x="232" y="94" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">FÓRMULAS DE DIMENSIONADO</text>
+
+  <text x="45" y="128" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80">Tensión máxima de string (invierno):</text>
+  <rect x="35" y="136" width="395" height="36" rx="5" fill="#052e16"/>
+  <text x="232" y="149" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#86efac" text-anchor="middle">Vstring_max = n × Voc × [1 + α_Voc × (Tmin − 25)]</text>
+  <text x="232" y="163" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Tmin: mínima histórica del emplazamiento (°C)</text>
+
+  <text x="45" y="192" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80">Corriente del string (IEC 62548):</text>
+  <rect x="35" y="200" width="395" height="36" rx="5" fill="#052e16"/>
+  <text x="232" y="213" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#86efac" text-anchor="middle">Istring = Isc × 1,25 × 1,25</text>
+  <text x="232" y="227" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Factor 1,25 irradiancia × 1,25 temperatura (IEC 62548 §8)</text>
+
+  <text x="45" y="256" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#4ade80">Sección cable DC:</text>
+  <rect x="35" y="264" width="395" height="36" rx="5" fill="#052e16"/>
+  <text x="232" y="277" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#86efac" text-anchor="middle">S = 2 × ρ × L × Istring / ΔUmax</text>
+  <text x="232" y="291" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">ΔU ≤ 1% Vmpp_string · cable HX-J-Z1 o equivalente FV</text>
+
+  <text x="45" y="330" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Constante k cable DC (90°C XLPE): k = 143</text>
+  <text x="45" y="348" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Protección inversor: Voc_string ≤ Vin_max_inv</text>
+  <text x="45" y="366" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Vmpp_string dentro del rango MPPT del inversor todo el año</text>
+
+  <!-- Example section -->
+  <rect x="460" y="72" width="415" height="290" rx="8" fill="#0c1f3a" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="460" y="72" width="415" height="36" rx="8" fill="#1e3a8a"/>
+  <rect x="460" y="94" width="415" height="14" fill="#1e3a8a"/>
+  <text x="667" y="94" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">EJEMPLO NUMÉRICO (panel 400 Wp)</text>
+
+  <text x="480" y="128" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">Datos del módulo:</text>
+  <text x="480" y="148" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Voc = 41,2 V · Vmpp = 34,0 V</text>
+  <text x="480" y="166" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Isc = 12,3 A · Impp = 11,8 A</text>
+  <text x="480" y="184" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">α_Voc = -0,30 %/°C</text>
+  <line x1="470" y1="194" x2="865" y2="194" stroke="#1e3560" stroke-width="0.8"/>
+
+  <text x="480" y="214" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#94a3b8">String de 10 módulos en serie, Tmin = -5°C:</text>
+  <text x="480" y="234" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Vstring_max = 10 × 41,2 × [1 + (-0,003×(-5-25))]</text>
+  <text x="480" y="252" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">Vstring_max = 10 × 41,2 × 1,09 = <tspan font-weight="bold">449 V</tspan></text>
+  <text x="480" y="270" font-family="Arial,sans-serif" font-size="10" fill="#64748b">(verificar ≤ Vin_max del inversor · típico 600 V o 1000 V)</text>
+  <line x1="470" y1="280" x2="865" y2="280" stroke="#1e3560" stroke-width="0.8"/>
+
+  <text x="480" y="300" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Istring = 12,3 × 1,25 × 1,25 = <tspan font-weight="bold" fill="#fbbf24">19,2 A</tspan></text>
+  <text x="480" y="320" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Fusible string: In ≥ 19,2 A → elegir <tspan font-weight="bold" fill="#fbbf24">25 A</tspan> tipo gPV</text>
+  <text x="480" y="340" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Cable DC 20 m: S ≥ 2×0,0179×20×19,2/3,4</text>
+  <text x="480" y="358" font-family="Arial,sans-serif" font-size="11" fill="#4ade80">S ≥ 4,03 mm² → normalizado: <tspan font-weight="bold">6 mm²</tspan></text>
+
+  <!-- Footer box -->
+  <rect x="25" y="377" width="850" height="68" rx="6" fill="#0a1628" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="454" y="402" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Normativa aplicable al dimensionado DC</text>
+  <text x="454" y="422" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">IEC 62548:2016 §8 — factores 1,25 de irradiancia y temperatura · Cable tipo HX-J-Z1 (UNE-EN 50618)</text>
+  <text x="454" y="440" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">UNE-HD 60364-7-712 §712.433 — protección contra sobrecorrientes en instalaciones FV</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Cálculo string FV · IEC 62548 · UNE-HD 60364-7-712</text>
+</svg>

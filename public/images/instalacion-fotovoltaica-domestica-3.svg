@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgfv3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1f0a"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgfv3)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#16a34a" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Protecciones FV — Criterios de selección</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">ITC-BT-23 · ITC-BT-40 · IEC 62548 · UNE-HD 60364-7-712 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Table header -->
+  <rect x="25" y="70" width="850" height="30" rx="4" fill="#14532d"/>
+  <text x="140" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">Elemento de protección</text>
+  <text x="340" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">Ubicación</text>
+  <text x="520" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">Criterio de selección</text>
+  <text x="760" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">Norma</text>
+
+  <!-- Row 1: Fusible string -->
+  <rect x="25" y="100" width="850" height="38" rx="2" fill="#0c1f3a"/>
+  <text x="140" y="115" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Fusible de string</text>
+  <text x="140" y="130" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">tipo gPV DC</text>
+  <text x="340" y="122" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Combiner DC</text>
+  <text x="520" y="115" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">In ≥ 1,25 × 1,25 × Isc = 1,56 × Isc</text>
+  <text x="520" y="130" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Solo si hay &gt; 2 strings en paralelo</text>
+  <text x="760" y="122" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">IEC 62548 §8.5</text>
+
+  <!-- Row 2: Seccionador DC -->
+  <rect x="25" y="138" width="850" height="38" rx="2" fill="#081426"/>
+  <text x="140" y="153" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Seccionador DC</text>
+  <text x="140" y="168" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">con interrupción visible</text>
+  <text x="340" y="160" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Antes del inversor</text>
+  <text x="520" y="153" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Ud ≥ 1,2 × Vstring_max · Id ≥ Istring</text>
+  <text x="520" y="168" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Carga de corriente DC con capacidad de corte</text>
+  <text x="760" y="160" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">UNE-HD 60364-7-712</text>
+
+  <!-- Row 3: Diodo bypass -->
+  <rect x="25" y="176" width="850" height="38" rx="2" fill="#0c1f3a"/>
+  <text x="140" y="191" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Diodo bypass</text>
+  <text x="140" y="206" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">integrado en módulo</text>
+  <text x="340" y="198" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Caja de conexiones</text>
+  <text x="520" y="191" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Protección punto caliente en sombra parcial</text>
+  <text x="520" y="206" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Incluido en módulo certificado IEC 61215</text>
+  <text x="760" y="198" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">IEC 61215</text>
+
+  <!-- Row 4: Diferencial AC -->
+  <rect x="25" y="214" width="850" height="50" rx="2" fill="#081426"/>
+  <text x="140" y="229" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Diferencial AC</text>
+  <text x="140" y="247" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">⚠ Tipo B obligatorio</text>
+  <text x="140" y="259" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">en inversores PWM</text>
+  <text x="340" y="240" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Cuadro AC</text>
+  <text x="520" y="229" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Tipo B: detecta fuga AC + DC pulsante + DC pura</text>
+  <text x="520" y="247" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">IΔn = 30 mA · Tipo A: insuficiente con inv. trifásico</text>
+  <text x="520" y="259" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Tipo AC: PROHIBIDO con inversores modernos</text>
+  <text x="760" y="240" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">ITC-BT-23</text>
+  <text x="760" y="255" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">IEC 62548 §9.4</text>
+
+  <!-- Row 5: Magnetotérmico AC -->
+  <rect x="25" y="264" width="850" height="38" rx="2" fill="#0c1f3a"/>
+  <text x="140" y="279" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Magnetotérmico AC</text>
+  <text x="140" y="294" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">IEC 60898-1</text>
+  <text x="340" y="286" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Cuadro AC</text>
+  <text x="520" y="279" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">In ≥ Iac_max_inv · curva C · Icu ≥ Icc punto</text>
+  <text x="520" y="294" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Iac = Pinversor / (√3 × V × cosφ) en trifásico</text>
+  <text x="760" y="286" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">ITC-BT-40</text>
+
+  <!-- Row 6: Anti-islanding -->
+  <rect x="25" y="302" width="850" height="38" rx="2" fill="#081426"/>
+  <text x="140" y="317" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Anti-islanding</text>
+  <text x="140" y="332" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">función del inversor</text>
+  <text x="340" y="324" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Integrado en inversor</text>
+  <text x="520" y="317" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Desconexión en ≤ 5 s ante fallo de red</text>
+  <text x="520" y="332" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Certificación requerida para conexión a red</text>
+  <text x="760" y="324" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">EN 50549-1</text>
+
+  <!-- Summary -->
+  <rect x="25" y="353" width="850" height="90" rx="6" fill="#0a1628" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="454" y="377" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Error crítico más común — Tipo de diferencial incorrecto</text>
+  <text x="45" y="400" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Instalar diferencial Tipo AC en instalaciones con inversor fotovoltaico es el error más frecuente y más peligroso.</text>
+  <text x="45" y="420" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Los inversores modernos PWM generan componente DC de fuga que el Tipo AC no detecta. Usar siempre Tipo B.</text>
+  <text x="45" y="438" font-family="Arial,sans-serif" font-size="10" fill="#64748b">ITC-BT-23 apdo. 3 · IEC 62548:2016 §9.4 · IEC 61008-1 (diferencial Tipo B)</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Protecciones FV · IEC 62548 · ITC-BT-23/40 · EN 50549-1</text>
+</svg>

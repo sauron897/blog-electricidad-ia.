@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgcc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgcc2)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#2563eb" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Claude Code vs Claude.ai — Diferencias clave para docentes</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">CLI vs Chatbot · Automatización en lote · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Two column headers -->
+  <rect x="25" y="70" width="415" height="36" rx="4" fill="#1e3a8a"/>
+  <text x="232" y="93" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#93c5fd" text-anchor="middle">Claude.ai (chatbot web)</text>
+
+  <rect x="460" y="70" width="415" height="36" rx="4" fill="#14532d"/>
+  <text x="667" y="93" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#86efac" text-anchor="middle">Claude Code (CLI terminal)</text>
+
+  <!-- Row 1: Modo de uso -->
+  <rect x="25" y="106" width="415" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="45" y="120" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">MODO DE USO</text>
+  <text x="232" y="136" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Interfaz web, un mensaje a la vez</text>
+
+  <rect x="460" y="106" width="415" height="36" rx="2" fill="#052e16"/>
+  <text x="480" y="120" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">MODO DE USO</text>
+  <text x="667" y="136" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Terminal local, acceso a ficheros</text>
+
+  <!-- Row 2: Archivos -->
+  <rect x="25" y="142" width="415" height="36" rx="2" fill="#081426"/>
+  <text x="45" y="156" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">ARCHIVOS</text>
+  <text x="232" y="172" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Copiar/pegar manualmente</text>
+
+  <rect x="460" y="142" width="415" height="36" rx="2" fill="#0a1f0a"/>
+  <text x="480" y="156" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">ARCHIVOS</text>
+  <text x="667" y="172" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Lee/escribe ficheros directamente</text>
+
+  <!-- Row 3: Lote -->
+  <rect x="25" y="178" width="415" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="45" y="192" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">PROCESAMIENTO EN LOTE</text>
+  <text x="232" y="208" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">No disponible — un fichero a la vez</text>
+
+  <rect x="460" y="178" width="415" height="36" rx="2" fill="#052e16"/>
+  <text x="480" y="192" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">PROCESAMIENTO EN LOTE</text>
+  <text x="667" y="208" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">25 exámenes en 3 minutos</text>
+
+  <!-- Row 4: Salida -->
+  <rect x="25" y="214" width="415" height="36" rx="2" fill="#081426"/>
+  <text x="45" y="228" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">FORMATO DE SALIDA</text>
+  <text x="232" y="244" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Texto en pantalla, copiar manual</text>
+
+  <rect x="460" y="214" width="415" height="36" rx="2" fill="#0a1f0a"/>
+  <text x="480" y="228" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">FORMATO DE SALIDA</text>
+  <text x="667" y="244" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">CSV, MD, JSON — directamente a disco</text>
+
+  <!-- Row 5: Privacidad -->
+  <rect x="25" y="250" width="415" height="36" rx="2" fill="#0c1f3a"/>
+  <text x="45" y="264" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">PRIVACIDAD DATOS</text>
+  <text x="232" y="280" font-family="Arial,sans-serif" font-size="11" fill="#fbbf24" text-anchor="middle">Datos enviados a servidores Anthropic</text>
+
+  <rect x="460" y="250" width="415" height="36" rx="2" fill="#052e16"/>
+  <text x="480" y="264" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">PRIVACIDAD DATOS</text>
+  <text x="667" y="280" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Procesa local, API sin almacenamiento</text>
+
+  <!-- Row 6: Coste -->
+  <rect x="25" y="286" width="415" height="36" rx="2" fill="#081426"/>
+  <text x="45" y="300" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8">COSTE</text>
+  <text x="232" y="316" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Suscripción fija 20€/mes</text>
+
+  <rect x="460" y="286" width="415" height="36" rx="2" fill="#0a1f0a"/>
+  <text x="480" y="300" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#86efac">COSTE</text>
+  <text x="667" y="316" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Pago por uso · ~0,05€/programación módulo</text>
+
+  <!-- Row 7: Ideal para -->
+  <rect x="25" y="322" width="415" height="28" rx="2" fill="#0c1f3a"/>
+  <text x="232" y="340" font-family="Arial,sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Consultas puntuales, conversación</text>
+
+  <rect x="460" y="322" width="415" height="28" rx="2" fill="#052e16"/>
+  <text x="667" y="340" font-family="Arial,sans-serif" font-size="11" fill="#86efac" text-anchor="middle">Automatización, lotes, integración</text>
+
+  <!-- Summary -->
+  <rect x="25" y="362" width="850" height="82" rx="6" fill="#0a1628" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="454" y="386" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Cuándo usar cada uno</text>
+  <text x="45" y="408" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Claude.ai: ideal para explorar, hacer preguntas concretas, redactar un texto puntual. Sin instalación.</text>
+  <text x="45" y="426" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Claude Code: cuando necesitas procesar ficheros, generar muchos documentos, automatizar tareas repetitivas.</text>
+  <text x="45" y="440" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Ambos usan el mismo modelo. La diferencia está en el entorno de ejecución, no en la inteligencia.</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Claude Code para docentes · CLI vs chatbot · Automatización FP</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgcc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgcc)"/>
+  <rect width="1200" height="630" fill="none" stroke="#1e3560" stroke-width="1"/>
+  <rect x="0" y="0" width="10" height="630" fill="#2563eb" opacity="0.8"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#2563eb" opacity="0.5"/>
+
+  <!-- Terminal decorative background (right) -->
+  <rect x="640" y="50" width="530" height="550" rx="10" fill="#020810" stroke="#1e3560" stroke-width="1"/>
+  <rect x="640" y="50" width="530" height="36" rx="10" fill="#0c1f3a"/>
+  <rect x="640" y="72" width="530" height="14" fill="#0c1f3a"/>
+  <circle cx="664" cy="68" r="7" fill="#ef4444" opacity="0.7"/>
+  <circle cx="686" cy="68" r="7" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="708" cy="68" r="7" fill="#22c55e" opacity="0.7"/>
+  <text x="900" y="72" font-family="Arial,sans-serif" font-size="11" fill="#64748b" text-anchor="middle">claude-code — terminal</text>
+
+  <!-- Terminal content -->
+  <text x="660" y="108" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ claude --version</text>
+  <text x="660" y="126" font-family="monospace, Courier New" font-size="11" fill="#94a3b8">Claude Code 1.x.x (claude-sonnet-4)</text>
+
+  <text x="660" y="152" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ # Corrección de 25 exámenes en lote</text>
+  <text x="660" y="170" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ claude /project:path/to/examenes</text>
+  <text x="660" y="188" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Evalúa según rubrica.md. Criterio 3</text>
+  <text x="660" y="206" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; (seguridad ITC-BT-24) pondera 30%.</text>
+  <text x="660" y="224" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Exporta CSV con nota + comentario.</text>
+
+  <text x="660" y="250" font-family="monospace, Courier New" font-size="11" fill="#60a5fa">✓ Procesando examen_001.txt ........ OK</text>
+  <text x="660" y="268" font-family="monospace, Courier New" font-size="11" fill="#60a5fa">✓ Procesando examen_002.txt ........ OK</text>
+  <text x="660" y="286" font-family="monospace, Courier New" font-size="11" fill="#60a5fa">✓ Procesando examen_003.txt ........ OK</text>
+  <text x="660" y="304" font-family="monospace, Courier New" font-size="11" fill="#64748b">  [22 más...]</text>
+  <text x="660" y="322" font-family="monospace, Courier New" font-size="11" fill="#4ade80">✓ 25/25 completados — resultados.csv</text>
+
+  <line x1="655" y1="335" x2="1160" y2="335" stroke="#1e3560" stroke-width="0.8"/>
+
+  <text x="660" y="358" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ # Variantes de examen diferenciadas</text>
+  <text x="660" y="376" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ claude examen_base.md</text>
+  <text x="660" y="394" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Genera 4 variantes. Secciones:</text>
+  <text x="660" y="412" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; 1.5/2.5/4/6 mm². ITC-BT-19.</text>
+  <text x="660" y="430" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Incluye solución paso a paso.</text>
+
+  <text x="660" y="456" font-family="monospace, Courier New" font-size="11" fill="#60a5fa">✓ examen_v1.md  ✓ examen_v2.md</text>
+  <text x="660" y="474" font-family="monospace, Courier New" font-size="11" fill="#60a5fa">✓ examen_v3.md  ✓ examen_v4.md</text>
+  <text x="660" y="500" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ █</text>
+
+  <!-- Left side: title and info -->
+  <text x="60" y="110" font-family="Arial,sans-serif" font-size="13" fill="#2563eb" letter-spacing="3">INDUCTECH TRAINING · IA PARA DOCENTES</text>
+  <text x="60" y="178" font-family="Arial,sans-serif" font-size="46" font-weight="bold" fill="#f1f5f9">Claude Code</text>
+  <text x="60" y="232" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#f1f5f9">para</text>
+  <text x="60" y="286" font-family="Arial,sans-serif" font-size="38" font-weight="bold" fill="#f1f5f9">Docentes</text>
+  <text x="60" y="340" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6">Automatiza tus tareas</text>
+  <text x="60" y="380" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6">administrativas</text>
+  <text x="60" y="428" font-family="Arial,sans-serif" font-size="16" fill="#94a3b8">CLI · Procesamiento por lotes · Sin código</text>
+  <text x="60" y="452" font-family="Arial,sans-serif" font-size="14" fill="#64748b">Ley FP 3/2022 · DigCompEdu · AI Act 2024/1689</text>
+
+  <line x1="60" y1="476" x2="580" y2="476" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Stats -->
+  <rect x="60" y="492" width="160" height="70" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="140" y="518" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#60a5fa" text-anchor="middle">25</text>
+  <text x="140" y="538" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">exámenes</text>
+  <text x="140" y="554" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">en 3 min</text>
+
+  <rect x="234" y="492" width="160" height="70" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="314" y="518" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#60a5fa" text-anchor="middle">4</text>
+  <text x="314" y="538" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">variantes de</text>
+  <text x="314" y="554" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">examen / prompt</text>
+
+  <rect x="408" y="492" width="170" height="70" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="493" y="518" font-family="Arial,sans-serif" font-size="26" font-weight="bold" fill="#60a5fa" text-anchor="middle">~0,05€</text>
+  <text x="493" y="538" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">coste por</text>
+  <text x="493" y="554" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">programación módulo</text>
+
+  <!-- Footer -->
+  <text x="600" y="620" font-family="Arial,sans-serif" font-size="10" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Claude Code para docentes · Automatización FP · Ley FP 3/2022</text>
+</svg>

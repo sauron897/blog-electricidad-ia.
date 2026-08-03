@@ -4,6 +4,7 @@ description: "Los 7 errores más graves en instalaciones eléctricas domésticas
 pubDate: 2026-07-23
 keywords: ["errores instalaciones electricas", "errores instalacion electrica domestica", "fallos electricos domésticos REBT", "sección cable infradimensionada", "diferencial tipo A AC IEC 61008"]
 author: "Editor"
+heroImage: /images/errores-instalaciones-electricas-domesticas.svg
 ---
 
 Una instalación eléctrica doméstica defectuosa no siempre se manifiesta con un disparo o un incendio. Con frecuencia, los errores más peligrosos son silenciosos: un cable infradimensionado que trabaja al 110 % de su capacidad durante años, una toma de tierra con resistencia de 2 kΩ que no protege frente a ningún fallo de aislamiento, o un diferencial tipo AC instalado en un circuito con cargas electrónicas que genera corrientes de fuga con componente continua. Este artículo recorre los siete errores más comunes que un técnico encuentra en inspecciones y reformas de viviendas, con referencia normativa específica y criterio de corrección.
@@ -107,6 +108,8 @@ Los empalmes en conductores deben realizarse en **cajas de derivación** con gra
 
 ## Tabla de diagnóstico rápido en inspección
 
+![Diagnóstico en campo: verificaciones mínimas REBT](/images/errores-instalaciones-electricas-domesticas-2.svg)
+
 | Error | Señal en campo | Normativa | Corrección |
 |---|---|---|---|
 | Cable infradimensionado | Cable caliente, caída V > 3 % | ITC-BT-19, IEC 60364-5-52 | Sustituir conductor o reducir calibre protección |
@@ -120,6 +123,8 @@ Los empalmes en conductores deben realizarse en **cajas de derivación** con gra
 ---
 
 ## Criterios de priorización en revisión o reforma
+
+![Errores comunes: criterios de corrección en obra](/images/errores-instalaciones-electricas-domesticas-3.svg)
 
 No todos los errores tienen el mismo peso de riesgo. El orden de intervención técnica:
 

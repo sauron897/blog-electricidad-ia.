@@ -4,6 +4,7 @@ description: "Cómo usar inteligencia artificial en el aula técnica de FP Eléc
 pubDate: 2026-07-21
 keywords: ["inteligencia artificial aula tecnica", "IA docentes FP electricidad", "ChatGPT ingenieria electrica", "herramientas IA formacion profesional", "IA calculo electrico"]
 author: "Editor"
+heroImage: /images/inteligencia-artificial-aula-tecnica.svg
 ---
 
 La pregunta que recibe cualquier docente de FP Eléctrica hoy no es si debe usar inteligencia artificial en el aula — es qué herramientas son realmente útiles para un técnico, cuáles son ruido de marketing y cuáles tienen limitaciones que el alumno necesita conocer antes de confiar en ellas en obra.
@@ -65,6 +66,8 @@ Este flujo enseña algo importante: el LLM es el asistente de interpretación, n
 
 ## Casos de uso concretos en el aula de FP Eléctrica
 
+![IA en el aula técnica: casos de uso y prompts efectivos](/images/inteligencia-artificial-aula-tecnica-2.svg)
+
 ### Generación de supuestos de cálculo diferenciados
 
 Un grupo de 20 alumnos puede recibir 20 versiones del mismo problema de cálculo de sección (ITC-BT-19) con datos diferentes: distancia, potencia, tensión de suministro, factor de potencia, temperatura ambiente. El docente genera los 20 enunciados con un único prompt bien estructurado en 3 minutos.
@@ -89,6 +92,7 @@ La IEC 60364-6 define los ensayos de recepción de instalaciones eléctricas. Pe
 
 ## Criterios de selección de herramientas IA para docentes técnicos
 
+![Selección de herramienta IA: criterios para docentes técnicos](/images/inteligencia-artificial-aula-tecnica-3.svg)
 
 No toda herramienta IA sirve para cada tipo de tarea. Estos criterios permiten elegir sin necesidad de probar todo:
 

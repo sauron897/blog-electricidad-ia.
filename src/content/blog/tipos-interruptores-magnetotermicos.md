@@ -140,7 +140,7 @@ Los dispositivos de clase 3 (los más habituales en gamas residencial y terciari
 
 ## Procedimiento de selección: ejemplo numérico
 
-![Guía de selección de interruptor magnetotérmico](/images/tipos-interruptores-magnetotermicos-2.png)
+![Guía de selección de interruptor magnetotérmico](/images/tipos-interruptores-magnetotermicos-2.svg)
 
 **Datos del circuito:**
 - Motor trifásico 400 V, 7,5 kW, cosφ = 0,86, rendimiento η = 0,91, arranque directo

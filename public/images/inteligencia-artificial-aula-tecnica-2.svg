@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgia2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#1a0a3a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgia2)"/>
+  <rect width="900" height="480" fill="none" stroke="#4c1d95" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#7c3aed" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">IA en el aula técnica — Casos de uso y prompts efectivos</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Para docentes de FP Eléctrica e Instalaciones · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#4c1d95" stroke-width="1"/>
+
+  <!-- Use case 1: Generación de ejercicios -->
+  <rect x="25" y="72" width="268" height="188" rx="8" fill="#0c1f3a" stroke="#7c3aed" stroke-width="1.5"/>
+  <rect x="25" y="72" width="268" height="36" rx="8" fill="#2e1065"/>
+  <rect x="25" y="94" width="268" height="14" fill="#2e1065"/>
+  <text x="159" y="94" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c4b5fd" text-anchor="middle">CASO 1</text>
+  <text x="159" y="124" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Generar ejercicios</text>
+  <text x="159" y="142" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">técnicos</text>
+
+  <text x="45" y="170" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#a78bfa">Prompt ejemplo:</text>
+  <rect x="35" y="176" width="248" height="70" rx="4" fill="#1a0a3a"/>
+  <text x="45" y="192" font-family="monospace, Courier New" font-size="9" fill="#c4b5fd">"Genera 5 ejercicios de cálculo</text>
+  <text x="45" y="206" font-family="monospace, Courier New" font-size="9" fill="#c4b5fd"> de sección de cable según</text>
+  <text x="45" y="220" font-family="monospace, Courier New" font-size="9" fill="#c4b5fd"> ITC-BT-19. Nivel CFGM 2º año.</text>
+  <text x="45" y="234" font-family="monospace, Courier New" font-size="9" fill="#c4b5fd"> Incluye solución paso a paso."</text>
+
+  <!-- Use case 2: Corrección examenes -->
+  <rect x="316" y="72" width="268" height="188" rx="8" fill="#0c1f3a" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="316" y="72" width="268" height="36" rx="8" fill="#1e3a8a"/>
+  <rect x="316" y="94" width="268" height="14" fill="#1e3a8a"/>
+  <text x="450" y="94" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">CASO 2</text>
+  <text x="450" y="124" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Corrección con</text>
+  <text x="450" y="142" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">rúbrica técnica</text>
+
+  <text x="336" y="170" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#60a5fa">Prompt ejemplo:</text>
+  <rect x="326" y="176" width="248" height="70" rx="4" fill="#0a1628"/>
+  <text x="336" y="192" font-family="monospace, Courier New" font-size="9" fill="#93c5fd">"Evalúa este examen con la</text>
+  <text x="336" y="206" font-family="monospace, Courier New" font-size="9" fill="#93c5fd"> rúbrica adjunta. Criterio 3</text>
+  <text x="336" y="220" font-family="monospace, Courier New" font-size="9" fill="#93c5fd"> (seguridad ITC-BT-24) pondera</text>
+  <text x="336" y="234" font-family="monospace, Courier New" font-size="9" fill="#93c5fd"> 30%. Exporta nota y comentario."</text>
+
+  <!-- Use case 3: Programacion modulo -->
+  <rect x="607" y="72" width="268" height="188" rx="8" fill="#0c1f3a" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="607" y="72" width="268" height="36" rx="8" fill="#14532d"/>
+  <rect x="607" y="94" width="268" height="14" fill="#14532d"/>
+  <text x="741" y="94" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#86efac" text-anchor="middle">CASO 3</text>
+  <text x="741" y="124" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Programación de</text>
+  <text x="741" y="142" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">módulo</text>
+
+  <text x="627" y="170" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#4ade80">Prompt ejemplo:</text>
+  <rect x="617" y="176" width="248" height="70" rx="4" fill="#052e16"/>
+  <text x="627" y="192" font-family="monospace, Courier New" font-size="9" fill="#86efac">"Crea una programación para</text>
+  <text x="627" y="206" font-family="monospace, Courier New" font-size="9" fill="#86efac"> RA3 de IEI CFGM. Incluye</text>
+  <text x="627" y="220" font-family="monospace, Courier New" font-size="9" fill="#86efac"> criterios, actividades y</text>
+  <text x="627" y="234" font-family="monospace, Courier New" font-size="9" fill="#86efac"> temporalización 8 semanas."</text>
+
+  <!-- Second row of use cases -->
+  <!-- Use case 4: Dudas tecnicas -->
+  <rect x="25" y="270" width="268" height="88" rx="8" fill="#0c1f3a" stroke="#f59e0b" stroke-width="1.5"/>
+  <rect x="25" y="270" width="268" height="28" rx="8" fill="#451a03"/>
+  <rect x="25" y="284" width="268" height="14" fill="#451a03"/>
+  <text x="159" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">CASO 4 · Consultas normativas</text>
+  <text x="45" y="316" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">"¿Qué sección mínima exige ITC-BT-25</text>
+  <text x="45" y="330" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0"> para el circuito C5 de cocina?"</text>
+  <text x="45" y="348" font-family="Arial,sans-serif" font-size="9" fill="#fbbf24">⚠ Verificar siempre con el texto oficial</text>
+
+  <!-- Use case 5: Variantes examen -->
+  <rect x="316" y="270" width="268" height="88" rx="8" fill="#0c1f3a" stroke="#ef4444" stroke-width="1.5"/>
+  <rect x="316" y="270" width="268" height="28" rx="8" fill="#7f1d1d"/>
+  <rect x="316" y="284" width="268" height="14" fill="#7f1d1d"/>
+  <text x="450" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fca5a5" text-anchor="middle">CASO 5 · Variantes de examen</text>
+  <text x="336" y="316" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">"Genera 4 variantes de este examen</text>
+  <text x="336" y="330" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0"> cambiando secciones: 1,5/2,5/4/6 mm²"</text>
+  <text x="336" y="348" font-family="Arial,sans-serif" font-size="9" fill="#fca5a5">Misma dificultad, datos distintos</text>
+
+  <!-- Use case 6: Retroalimentacion -->
+  <rect x="607" y="270" width="268" height="88" rx="8" fill="#0c1f3a" stroke="#06b6d4" stroke-width="1.5"/>
+  <rect x="607" y="270" width="268" height="28" rx="8" fill="#164e63"/>
+  <rect x="607" y="284" width="268" height="14" fill="#164e63"/>
+  <text x="741" y="288" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#67e8f9" text-anchor="middle">CASO 6 · Retroalimentación</text>
+  <text x="627" y="316" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">"Genera feedback individualizado</text>
+  <text x="627" y="330" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0"> para este resultado de evaluación"</text>
+  <text x="627" y="348" font-family="Arial,sans-serif" font-size="9" fill="#67e8f9">Tono constructivo y específico</text>
+
+  <!-- Summary -->
+  <rect x="25" y="370" width="850" height="72" rx="6" fill="#0a1628" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="454" y="394" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Principio de uso efectivo — Contexto específico + criterio de verificación</text>
+  <text x="45" y="416" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Un prompt técnico eficaz especifica: nivel educativo, normativa aplicable, formato de salida y criterio de validación.</text>
+  <text x="45" y="434" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Toda respuesta normativa debe verificarse en el texto oficial (REBT, IEC, UNE) antes de usar con alumnos. DigCompEdu nivel 3+.</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · IA aula técnica · Prompts FP Eléctrica · DigCompEdu</text>
+</svg>

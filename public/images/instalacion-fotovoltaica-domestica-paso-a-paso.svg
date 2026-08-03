@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgfv" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1f0a"/>
+      <stop offset="40%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgfv)"/>
+  <rect width="1200" height="630" fill="none" stroke="#1e3560" stroke-width="1"/>
+  <rect x="0" y="0" width="10" height="630" fill="#16a34a" opacity="0.8"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#16a34a" opacity="0.5"/>
+
+  <!-- Decorative grid -->
+  <line x1="660" y1="0" x2="660" y2="630" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="6,10"/>
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="6,10"/>
+
+  <!-- Left: Title -->
+  <text x="60" y="110" font-family="Arial,sans-serif" font-size="13" fill="#16a34a" letter-spacing="3">INDUCTECH TRAINING · ENERGÍAS RENOVABLES</text>
+  <text x="60" y="175" font-family="Arial,sans-serif" font-size="50" font-weight="bold" fill="#f1f5f9">Instalación</text>
+  <text x="60" y="235" font-family="Arial,sans-serif" font-size="50" font-weight="bold" fill="#f1f5f9">Fotovoltaica</text>
+  <text x="60" y="295" font-family="Arial,sans-serif" font-size="42" font-weight="bold" fill="#4ade80">Doméstica</text>
+  <text x="60" y="345" font-family="Arial,sans-serif" font-size="22" fill="#94a3b8">Paso a paso técnico para instaladores</text>
+  <text x="60" y="373" font-family="Arial,sans-serif" font-size="15" fill="#64748b">RD 244/2019 · UNE-HD 60364-7-712 · IEC 62548</text>
+
+  <line x1="60" y1="400" x2="580" y2="400" stroke="#16a34a" stroke-width="2"/>
+
+  <!-- Tags -->
+  <rect x="60" y="418" width="140" height="26" rx="13" fill="#14532d"/>
+  <text x="130" y="435" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">RD 244/2019</text>
+  <rect x="212" y="418" width="155" height="26" rx="13" fill="#14532d"/>
+  <text x="289" y="435" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">IEC 60364-7-712</text>
+  <rect x="379" y="418" width="120" height="26" rx="13" fill="#14532d"/>
+  <text x="439" y="435" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">IEC 62548</text>
+
+  <!-- Key data -->
+  <rect x="60" y="458" width="560" height="130" rx="8" fill="#081426" stroke="#1e3560" stroke-width="1"/>
+  <text x="80" y="480" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#94a3b8">Parámetros clave del diseño</text>
+  <text x="80" y="502" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Vstring_max = Voc × (1 + α_Voc × (Tmin − 25))</text>
+  <text x="80" y="520" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Istring = Isc × 1,25 × 1,25    (IEC 62548 factor seguridad DC)</text>
+  <text x="80" y="538" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Cable DC: sección por criterio térmico + ΔU ≤ 1% (UNE-HD 60364-7-712)</text>
+  <text x="80" y="556" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Diferencial AC: Tipo B (ITC-BT-23) en inversores PWM trifásicos</text>
+  <text x="80" y="574" font-family="Arial,sans-serif" font-size="11" fill="#64748b">Anti-islanding requerido: EN 50549-1:2019</text>
+
+  <!-- Right: system diagram -->
+  <rect x="680" y="60" width="490" height="540" rx="10" fill="#081426" stroke="#1e3560" stroke-width="1"/>
+  <text x="925" y="95" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#94a3b8" text-anchor="middle">ESQUEMA DEL SISTEMA FV</text>
+  <line x1="690" y1="105" x2="1160" y2="105" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Panel FV -->
+  <rect x="720" y="120" width="200" height="100" rx="6" fill="#0c1f3a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="820" y="147" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80" text-anchor="middle">☀ MÓDULO FV</text>
+  <text x="820" y="165" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">IEC 61215 / IEC 61730</text>
+  <text x="820" y="181" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Voc / Isc / Pmax STC</text>
+  <text x="820" y="197" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">α_Voc: coef. temperatura</text>
+
+  <!-- Arrow down -->
+  <line x1="820" y1="220" x2="820" y2="255" stroke="#4ade80" stroke-width="2"/>
+  <polygon points="820,265 813,250 827,250" fill="#4ade80"/>
+  <text x="830" y="242" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Cable DC</text>
+  <text x="830" y="254" font-family="Arial,sans-serif" font-size="9" fill="#64748b">ΔU ≤ 1%</text>
+
+  <!-- Fusibles / combiner -->
+  <rect x="740" y="268" width="160" height="50" rx="5" fill="#0c1f3a" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="820" y="290" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#fbbf24" text-anchor="middle">FUSIBLES STRING</text>
+  <text x="820" y="306" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">IEC 62548 · In ≥ 1,25×Isc</text>
+
+  <!-- Arrow down -->
+  <line x1="820" y1="318" x2="820" y2="348" stroke="#f59e0b" stroke-width="2"/>
+  <polygon points="820,358 813,343 827,343" fill="#f59e0b"/>
+
+  <!-- Inversor -->
+  <rect x="710" y="360" width="220" height="70" rx="6" fill="#0c1f3a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="820" y="388" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#60a5fa" text-anchor="middle">INVERSOR</text>
+  <text x="820" y="406" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">MPPT · Anti-islanding EN 50549-1</text>
+  <text x="820" y="420" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">η ≈ 97-98% · THD &lt; 5%</text>
+
+  <!-- Arrow down to AC -->
+  <line x1="820" y1="430" x2="820" y2="460" stroke="#3b82f6" stroke-width="2"/>
+  <polygon points="820,470 813,455 827,455" fill="#3b82f6"/>
+
+  <!-- AC protection -->
+  <rect x="730" y="472" width="180" height="50" rx="5" fill="#0c1f3a" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="820" y="492" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#c4b5fd" text-anchor="middle">PROTECCIONES AC</text>
+  <text x="820" y="507" font-family="Arial,sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Magnetotérmico + Diferencial tipo B</text>
+  <text x="820" y="519" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">ITC-BT-23 · ITC-BT-40</text>
+
+  <!-- Arrow to meter -->
+  <line x1="820" y1="522" x2="820" y2="552" stroke="#8b5cf6" stroke-width="2"/>
+  <polygon points="820,562 813,547 827,547" fill="#8b5cf6"/>
+
+  <!-- Contador -->
+  <rect x="745" y="564" width="150" height="36" rx="5" fill="#0c1f3a" stroke="#64748b" stroke-width="1"/>
+  <text x="820" y="580" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#94a3b8" text-anchor="middle">CONTADOR + RED</text>
+  <text x="820" y="592" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Compensación RD 244/2019</text>
+
+  <!-- Right column annotations -->
+  <text x="960" y="175" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">LADO DC</text>
+  <line x1="955" y1="180" x2="955" y2="430" stroke="#4ade80" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="960" y="455" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#3b82f6">LADO AC</text>
+  <line x1="955" y1="460" x2="955" y2="590" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Footer -->
+  <text x="600" y="620" font-family="Arial,sans-serif" font-size="10" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Fotovoltaica doméstica · RD 244/2019 · UNE-HD 60364-7-712 · IEC 62548</text>
+</svg>

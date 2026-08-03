@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0a2240"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+    <filter id="glow5">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg5)"/>
+  <rect width="1200" height="630" fill="none" stroke="#1e3560" stroke-width="1"/>
+  <rect x="0" y="0" width="10" height="630" fill="#2563eb" opacity="0.8"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#2563eb" opacity="0.6"/>
+
+  <!-- Background circuit lines decorative -->
+  <line x1="700" y1="0" x2="700" y2="630" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="8,12"/>
+  <line x1="850" y1="0" x2="850" y2="630" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="8,12"/>
+  <line x1="0" y1="200" x2="1200" y2="200" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="8,12"/>
+  <line x1="0" y1="400" x2="1200" y2="400" stroke="#1e3560" stroke-width="0.5" stroke-dasharray="8,12"/>
+
+  <!-- Left section: Title area -->
+  <text x="60" y="110" font-family="Arial,sans-serif" font-size="13" fill="#3b82f6" letter-spacing="3">INDUCTECH TRAINING · FP ELECTROTÉCNICA</text>
+  <text x="60" y="170" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#f1f5f9">Enseñar</text>
+  <text x="60" y="230" font-family="Arial,sans-serif" font-size="52" font-weight="bold" fill="#f1f5f9">Electricidad</text>
+  <text x="60" y="290" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#3b82f6">con Proyectos</text>
+  <text x="60" y="345" font-family="Arial,sans-serif" font-size="44" font-weight="bold" fill="#3b82f6">Prácticos</text>
+  <text x="60" y="400" font-family="Arial,sans-serif" font-size="18" fill="#94a3b8">Metodología ABP aplicada a instalaciones eléctricas</text>
+  <text x="60" y="428" font-family="Arial,sans-serif" font-size="16" fill="#64748b">IEC 60364-6 · ITC-BT-19/24/25 · Verificación instrumental</text>
+
+  <!-- Divider line -->
+  <line x1="60" y1="460" x2="580" y2="460" stroke="#2563eb" stroke-width="2"/>
+
+  <!-- Tags -->
+  <rect x="60" y="475" width="100" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="110" y="492" font-family="Arial,sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">ABP</text>
+  <rect x="172" y="475" width="120" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="232" y="492" font-family="Arial,sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">REBT / IEC</text>
+  <rect x="304" y="475" width="140" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="374" y="492" font-family="Arial,sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Taller FP</text>
+  <rect x="456" y="475" width="160" height="26" rx="13" fill="#1e3a8a"/>
+  <text x="536" y="492" font-family="Arial,sans-serif" font-size="11" fill="#93c5fd" text-anchor="middle">Verificación real</text>
+
+  <!-- Right section: 3 levels visual -->
+  <rect x="720" y="60" width="440" height="510" rx="10" fill="#081426" stroke="#1e3560" stroke-width="1"/>
+
+  <text x="940" y="98" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#94a3b8" text-anchor="middle">NIVELES DE ENTREGABLE DEL PROYECTO</text>
+  <line x1="730" y1="108" x2="1150" y2="108" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Level 1 -->
+  <rect x="735" y="118" width="418" height="138" rx="8" fill="#0c1f3a" stroke="#3b82f6" stroke-width="1.5"/>
+  <circle cx="762" cy="145" r="18" fill="#1e3a8a" stroke="#3b82f6" stroke-width="2"/>
+  <text x="762" y="151" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#60a5fa" text-anchor="middle">1</text>
+  <text x="800" y="142" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Documentación técnica</text>
+  <text x="800" y="160" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Esquema unifilar + lista materiales</text>
+  <text x="800" y="176" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Norma: ITC-BT-15, ITC-BT-25</text>
+  <text x="800" y="192" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Competencia: cálculo y documentación</text>
+  <rect x="745" y="208" width="398" height="38" rx="5" fill="#172554"/>
+  <text x="944" y="221" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">Objetivo: el alumno justifica cada sección y protección con valores IEC</text>
+  <text x="944" y="238" font-family="Arial,sans-serif" font-size="10" fill="#93c5fd" text-anchor="middle">antes de montar nada</text>
+
+  <!-- Level 2 -->
+  <rect x="735" y="266" width="418" height="138" rx="8" fill="#0c1f3a" stroke="#f59e0b" stroke-width="1.5"/>
+  <circle cx="762" cy="293" r="18" fill="#451a03" stroke="#f59e0b" stroke-width="2"/>
+  <text x="762" y="299" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#fbbf24" text-anchor="middle">2</text>
+  <text x="800" y="290" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Montaje físico en taller</text>
+  <text x="800" y="308" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Panel o maqueta conforme a proyecto</text>
+  <text x="800" y="324" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Norma: ITC-BT-19, ITC-BT-24</text>
+  <text x="800" y="340" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Competencia: ejecución según normativa</text>
+  <rect x="745" y="356" width="398" height="38" rx="5" fill="#1c1408"/>
+  <text x="944" y="369" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Objetivo: conectar correctamente, no solo que funcione —</text>
+  <text x="944" y="386" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">sección correcta, conductores identificados, protecciones coordinadas</text>
+
+  <!-- Level 3 -->
+  <rect x="735" y="414" width="418" height="140" rx="8" fill="#0c1f3a" stroke="#22c55e" stroke-width="1.5"/>
+  <circle cx="762" cy="441" r="18" fill="#052e16" stroke="#22c55e" stroke-width="2"/>
+  <text x="762" y="447" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#4ade80" text-anchor="middle">3</text>
+  <text x="800" y="438" font-family="Arial,sans-serif" font-size="14" font-weight="bold" fill="#f1f5f9">Verificación instrumental</text>
+  <text x="800" y="456" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Acta de medidas con instrumentos reales</text>
+  <text x="800" y="472" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Norma: IEC 60364-6 (UNE-HD 60364-6)</text>
+  <text x="800" y="488" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Aislamiento ≥ 0,5 MΩ · Bucle fallo · Continuidad PE ≤ 1 Ω</text>
+  <rect x="745" y="504" width="398" height="38" rx="5" fill="#052e16"/>
+  <text x="944" y="517" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">El nivel que más técnicos de FP no alcanzan — y el más</text>
+  <text x="944" y="534" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">exigido en puesta en servicio real</text>
+
+  <!-- Footer -->
+  <text x="600" y="620" font-family="Arial,sans-serif" font-size="10" fill="#4a6a8a" text-anchor="middle">INDUC TECH · ABP Electrotécnica · IEC 60364-6 · ITC-BT-19/24/25</text>
+</svg>

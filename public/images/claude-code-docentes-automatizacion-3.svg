@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgcc3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgcc3)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#2563eb" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Flujo de automatización — Corrección de exámenes en lote</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Claude Code CLI · Workflow paso a paso · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Step 1 -->
+  <rect x="25" y="75" width="160" height="120" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="105" y="98" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">PASO 1</text>
+  <text x="105" y="118" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">📁</text>
+  <text x="105" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Preparar</text>
+  <text x="105" y="164" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">carpeta con</text>
+  <text x="105" y="180" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">exámenes .txt</text>
+
+  <!-- Arrow 1 -->
+  <line x1="185" y1="135" x2="215" y2="135" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="215,129 225,135 215,141" fill="#2563eb"/>
+
+  <!-- Step 2 -->
+  <rect x="225" y="75" width="160" height="120" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="305" y="98" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">PASO 2</text>
+  <text x="305" y="118" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">📋</text>
+  <text x="305" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Definir rúbrica</text>
+  <text x="305" y="164" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">rubrica.md con</text>
+  <text x="305" y="180" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">pesos y criterios</text>
+
+  <!-- Arrow 2 -->
+  <line x1="385" y1="135" x2="415" y2="135" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="415,129 425,135 415,141" fill="#2563eb"/>
+
+  <!-- Step 3 -->
+  <rect x="425" y="75" width="160" height="120" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="505" y="98" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">PASO 3</text>
+  <text x="505" y="118" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">⌨</text>
+  <text x="505" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Ejecutar Claude</text>
+  <text x="505" y="164" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">claude /project:ruta</text>
+  <text x="505" y="180" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">+ prompt de tarea</text>
+
+  <!-- Arrow 3 -->
+  <line x1="585" y1="135" x2="615" y2="135" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="615,129 625,135 615,141" fill="#2563eb"/>
+
+  <!-- Step 4 -->
+  <rect x="625" y="75" width="160" height="120" rx="8" fill="#0c1f3a" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="705" y="98" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#93c5fd" text-anchor="middle">PASO 4</text>
+  <text x="705" y="118" font-family="Arial,sans-serif" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">📊</text>
+  <text x="705" y="148" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Resultado CSV</text>
+  <text x="705" y="164" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">nota + comentario</text>
+  <text x="705" y="180" font-family="Arial,sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">por alumno</text>
+
+  <!-- Arrow 4 -->
+  <line x1="785" y1="135" x2="815" y2="135" stroke="#2563eb" stroke-width="2"/>
+  <polygon points="815,129 825,135 815,141" fill="#2563eb"/>
+
+  <!-- Step 5 -->
+  <rect x="825" y="75" width="50" height="120" rx="8" fill="#14532d" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="850" y="135" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="#4ade80" text-anchor="middle">✓</text>
+
+  <!-- Command example -->
+  <rect x="25" y="210" width="850" height="80" rx="6" fill="#020810" stroke="#2563eb" stroke-width="1"/>
+  <text x="45" y="234" font-family="monospace, Courier New" font-size="11" fill="#4ade80">$ claude /project:./examenes_junio</text>
+  <text x="45" y="254" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Evalúa cada examen con rubrica.md. Criterio seguridad (ITC-BT-24) pondera 30%.</text>
+  <text x="45" y="274" font-family="monospace, Courier New" font-size="11" fill="#e2e8f0">&gt; Exporta resultados.csv con columnas: alumno, nota, comentario_principal.</text>
+
+  <!-- Stats row -->
+  <rect x="25" y="302" width="200" height="60" rx="6" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="125" y="324" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">3 min</text>
+  <text x="125" y="344" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">para 25 exámenes</text>
+  <text x="125" y="356" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">vs ~4 h manual</text>
+
+  <rect x="240" y="302" width="200" height="60" rx="6" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="340" y="324" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">~0,15€</text>
+  <text x="340" y="344" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">coste total lote</text>
+  <text x="340" y="356" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">25 exámenes completos</text>
+
+  <rect x="455" y="302" width="200" height="60" rx="6" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="555" y="324" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#60a5fa" text-anchor="middle">100%</text>
+  <text x="555" y="344" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">consistencia rúbrica</text>
+  <text x="555" y="356" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">mismo criterio en todos</text>
+
+  <rect x="670" y="302" width="205" height="60" rx="6" fill="#0c1f3a" stroke="#2563eb" stroke-width="1"/>
+  <text x="772" y="324" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="#fbbf24" text-anchor="middle">Revisar</text>
+  <text x="772" y="344" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">casos límite manual</text>
+  <text x="772" y="356" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">docente siempre decide</text>
+
+  <!-- Summary -->
+  <rect x="25" y="375" width="850" height="68" rx="6" fill="#0a1628" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="454" y="400" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">El docente define la rúbrica — la IA aplica el criterio de forma consistente</text>
+  <text x="45" y="422" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Claude Code no reemplaza la decisión pedagógica: la rúbrica la define el docente. La automatización elimina</text>
+  <text x="45" y="438" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">el trabajo mecánico de aplicar el mismo criterio 25 veces, reduciendo fatiga y sesgos de corrección.</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Claude Code para docentes · Corrección lote · Automatización FP</text>
+</svg>

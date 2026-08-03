@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgia3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#1a0a3a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgia3)"/>
+  <rect width="900" height="480" fill="none" stroke="#4c1d95" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#7c3aed" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Selección de herramienta IA — Criterios para docentes técnicos</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">DigCompEdu · AI Act 2024/1689 · Ley FP 3/2022 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#4c1d95" stroke-width="1"/>
+
+  <!-- Table header -->
+  <rect x="25" y="70" width="850" height="30" rx="4" fill="#2e1065"/>
+  <text x="170" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Tarea docente</text>
+  <text x="370" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Herramienta recomendada</text>
+  <text x="580" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Por qué / limitación</text>
+  <text x="780" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#c4b5fd" text-anchor="middle">Riesgo si se usa mal</text>
+
+  <!-- Row 1 -->
+  <rect x="25" y="100" width="850" height="40" rx="2" fill="#1a0a3a"/>
+  <text x="170" y="115" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Generar ejercicios técnicos</text>
+  <text x="170" y="131" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">con datos y solución</text>
+  <text x="370" y="122" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Claude / GPT-4 + prompt detallado</text>
+  <text x="580" y="115" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Buena coherencia lógica</text>
+  <text x="580" y="131" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Verificar valores numéricos siempre</text>
+  <text x="780" y="122" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Datos incorrectos sin verificar</text>
+
+  <!-- Row 2 -->
+  <rect x="25" y="140" width="850" height="40" rx="2" fill="#0c1f3a"/>
+  <text x="170" y="155" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Consultar normativa IEC/REBT</text>
+  <text x="170" y="171" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">valores exactos y artículos</text>
+  <text x="370" y="162" font-family="Arial,sans-serif" font-size="11" fill="#ef4444" text-anchor="middle">Texto oficial · NO usar solo IA</text>
+  <text x="580" y="155" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">IA puede alucinar valores normativos</text>
+  <text x="580" y="171" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Citar siempre fuente primaria</text>
+  <text x="780" y="162" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">Error normativo en examen</text>
+
+  <!-- Row 3 -->
+  <rect x="25" y="180" width="850" height="40" rx="2" fill="#1a0a3a"/>
+  <text x="170" y="195" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Corrección de exámenes</text>
+  <text x="170" y="211" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">con rúbrica definida</text>
+  <text x="370" y="202" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Claude Code (por lotes) / ChatGPT</text>
+  <text x="580" y="195" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Alta consistencia con rúbrica explícita</text>
+  <text x="580" y="211" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Revisar casos límite manualmente</text>
+  <text x="780" y="202" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Nota incorrecta sin revisión</text>
+
+  <!-- Row 4 -->
+  <rect x="25" y="220" width="850" height="40" rx="2" fill="#0c1f3a"/>
+  <text x="170" y="235" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Programación didáctica</text>
+  <text x="170" y="251" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">UDs, RA, criterios evaluación</text>
+  <text x="370" y="242" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Claude + plantilla normativa centro</text>
+  <text x="580" y="235" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Buen borrador base para adaptar</text>
+  <text x="580" y="251" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Adaptar al contexto local del centro</text>
+  <text x="780" y="242" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Programación genérica no adaptada</text>
+
+  <!-- Row 5 -->
+  <rect x="25" y="260" width="850" height="40" rx="2" fill="#1a0a3a"/>
+  <text x="170" y="275" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Presentaciones y materiales</text>
+  <text x="170" y="291" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">slides, infografías, resúmenes</text>
+  <text x="370" y="282" font-family="Arial,sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Gamma / Canva AI / Claude</text>
+  <text x="580" y="275" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Diseño rápido y profesional</text>
+  <text x="580" y="291" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Verificar exactitud técnica del contenido</text>
+  <text x="780" y="282" font-family="Arial,sans-serif" font-size="10" fill="#fbbf24" text-anchor="middle">Error técnico visible al alumno</text>
+
+  <!-- Row 6 -->
+  <rect x="25" y="300" width="850" height="30" rx="2" fill="#0c1f3a"/>
+  <text x="170" y="319" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Automatización administrativa</text>
+  <text x="370" y="319" font-family="Arial,sans-serif" font-size="11" fill="#4ade80" text-anchor="middle">Claude Code CLI (local, sin nube)</text>
+  <text x="580" y="319" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Procesa ficheros sin exponer datos</text>
+  <text x="780" y="319" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">Bajo si datos locales</text>
+
+  <!-- Summary -->
+  <rect x="25" y="342" width="850" height="98" rx="6" fill="#0a1628" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="454" y="366" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Regla de oro — La IA asiste, el docente decide y verifica</text>
+  <text x="45" y="390" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Ninguna herramienta IA reemplaza la verificación normativa. Toda salida con valores técnicos debe contrastarse</text>
+  <text x="45" y="410" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">con el texto oficial antes de ser usada en clase o en un examen. El docente firma el acta, no la IA.</text>
+  <text x="45" y="428" font-family="Arial,sans-serif" font-size="10" fill="#64748b">AI Act 2024/1689 art. 28 — responsabilidad del desplegador · DigCompEdu área 4 (evaluación) · Ley FP 3/2022</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Selección herramienta IA · DigCompEdu · AI Act · Ley FP 3/2022</text>
+</svg>

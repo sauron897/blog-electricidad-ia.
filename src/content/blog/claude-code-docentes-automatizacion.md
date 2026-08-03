@@ -4,6 +4,7 @@ description: "Guía técnica para docentes de FP Eléctrica: cómo usar Claude C
 pubDate: 2026-08-01
 keywords: ["claude code docentes automatizacion", "IA automatizacion tareas docentes FP", "claude code electrotecnia", "automatizar rubricas evaluacion FP", "inteligencia artificial docente ingenieria electrica"]
 author: "Editor"
+heroImage: /images/claude-code-docentes-automatizacion.svg
 ---
 
 El docente de FP Eléctrica dedica entre 8 y 12 horas semanales a tareas que no son enseñar: redactar memorias de módulo, generar variantes de examen, escribir informes individuales para familias, actualizar programaciones didácticas tras cambios normativos. Claude Code, la interfaz de línea de comandos de Anthropic disponible desde mayo de 2025, convierte una parte significativa de ese tiempo en procesos automatizables con comandos concretos.
@@ -62,6 +63,8 @@ La normativa de evaluación de FP (Orden EFP/844/2021 en el marco estatal, con d
 
 ## Flujos de trabajo reales: comandos y prompts aplicados
 
+![Claude Code vs Claude.ai: diferencias clave para docentes](/images/claude-code-docentes-automatizacion-2.svg)
+
 La diferencia entre un uso superficial y un uso productivo de Claude Code está en la especificidad del prompt. A continuación se muestran tres flujos verificados para el contexto de FP Eléctrica.
 
 ### Actualización de programación didáctica tras cambio normativo
@@ -101,6 +104,8 @@ La Ley FP 3/2022 introduce en su artículo 10 la orientación profesional person
 El REGLAMENTO (UE) 2024/1689 de IA (AI Act, aplicable desde agosto de 2026) clasifica los sistemas de IA utilizados en contextos educativos para evaluación como sistemas de **riesgo alto** (Anexo III, punto 3b). Esto no prohíbe su uso, pero impone al centro la obligación de registro y evaluación de conformidad si el sistema IA toma decisiones con impacto directo en los resultados del alumno. Un flujo en el que Claude Code sugiere notas que el docente revisa y valida no activa estas obligaciones; un sistema que publica notas directamente sin revisión humana, sí.
 
 ## Criterios de selección: cuándo usar Claude Code y cuándo no
+
+![Flujo de automatización: corrección de exámenes en lote](/images/claude-code-docentes-automatizacion-3.svg)
 
 La adopción de Claude Code para tareas docentes no es todo-o-nada. La tabla siguiente proporciona criterios operativos:
 

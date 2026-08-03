@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgerr3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="50%" style="stop-color:#2a0c0c"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgerr3)"/>
+  <rect width="900" height="480" fill="none" stroke="#7f1d1d" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#ef4444" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Errores comunes — Criterios de corrección en obra</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">ITC-BT-22 · ITC-BT-23 · ITC-BT-24 · ITC-BT-25 · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#7f1d1d" stroke-width="1"/>
+
+  <!-- Two column layout -->
+  <!-- Left col: Errors -->
+  <rect x="25" y="70" width="415" height="30" rx="4" fill="#7f1d1d"/>
+  <text x="232" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fca5a5" text-anchor="middle">Error detectado</text>
+
+  <!-- Error 1 -->
+  <rect x="25" y="100" width="415" height="50" rx="2" fill="#1a0a0a"/>
+  <text x="45" y="116" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f87171">1. Diferencial Tipo AC en circuito con inversor</text>
+  <text x="45" y="132" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">No detecta fuga DC pulsante ni DC pura</text>
+  <text x="45" y="146" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Error: instalador usó lo que tenía en almacén</text>
+
+  <!-- Error 2 -->
+  <rect x="25" y="150" width="415" height="50" rx="2" fill="#0d1626"/>
+  <text x="45" y="166" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f87171">2. Cable de sección insuficiente en toma de cocina</text>
+  <text x="45" y="182" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">2,5 mm² para circuito que exige 6 mm² (ITC-BT-25 C5)</text>
+  <text x="45" y="196" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Error: no verificar carga real del circuito</text>
+
+  <!-- Error 3 -->
+  <rect x="25" y="200" width="415" height="50" rx="2" fill="#1a0a0a"/>
+  <text x="45" y="216" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f87171">3. Toma sin conductor de protección (PE)</text>
+  <text x="45" y="232" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Masa de aparato sin conexión a tierra — riesgo contacto</text>
+  <text x="45" y="246" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Error: omitir identificación bicolor amarillo-verde</text>
+
+  <!-- Error 4 -->
+  <rect x="25" y="250" width="415" height="50" rx="2" fill="#0d1626"/>
+  <text x="45" y="266" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f87171">4. Magnetotérmico sobredimensionado</text>
+  <text x="45" y="282" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">PIA 32 A en circuito con cable 1,5 mm² (Iz = 15 A)</text>
+  <text x="45" y="296" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Error: elegir calibre por la carga, no por el cable</text>
+
+  <!-- Error 5 -->
+  <rect x="25" y="300" width="415" height="50" rx="2" fill="#1a0a0a"/>
+  <text x="45" y="316" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#f87171">5. Empalme sin caja de derivación registrable</text>
+  <text x="45" y="332" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Empalme directo en pared sin acceso posterior</text>
+  <text x="45" y="346" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Error: no conocer ITC-BT-20 (canalización accesible)</text>
+
+  <!-- Right col: Corrections -->
+  <rect x="460" y="70" width="415" height="30" rx="4" fill="#14532d"/>
+  <text x="667" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#86efac" text-anchor="middle">Criterio de corrección</text>
+
+  <!-- Fix 1 -->
+  <rect x="460" y="100" width="415" height="50" rx="2" fill="#052e16"/>
+  <text x="480" y="116" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">→ Sustituir por Tipo B (obligatorio ITC-BT-23)</text>
+  <text x="480" y="132" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">IΔn = 30 mA · Verificar con comprobador de diferenciales</text>
+  <text x="480" y="146" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Norma: IEC 62548 §9.4 · IEC 61008-1 (Tipo B)</text>
+
+  <!-- Fix 2 -->
+  <rect x="460" y="150" width="415" height="50" rx="2" fill="#0c1f3a"/>
+  <text x="480" y="166" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">→ Recablear con 6 mm² o separar circuito</text>
+  <text x="480" y="182" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Ib ≤ In ≤ Iz · verificar Iz (B2 XLPE 6mm² = 36 A)</text>
+  <text x="480" y="196" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Norma: ITC-BT-25 C5 cocinas · IEC 60364-5-52</text>
+
+  <!-- Fix 3 -->
+  <rect x="460" y="200" width="415" height="50" rx="2" fill="#052e16"/>
+  <text x="480" y="216" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">→ Tender conductor PE y medir CPE ≤ 1 Ω</text>
+  <text x="480" y="232" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Verificar con ohmímetro 200 mA · bicolor amarillo-verde</text>
+  <text x="480" y="246" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Norma: ITC-BT-19 §2.2.4 · IEC 60364-4-41</text>
+
+  <!-- Fix 4 -->
+  <rect x="460" y="250" width="415" height="50" rx="2" fill="#0c1f3a"/>
+  <text x="480" y="266" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">→ Ajustar PIA a In ≤ Iz del cable (máx 16 A)</text>
+  <text x="480" y="282" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Ib ≤ In ≤ Iz (15 A) → PIA 10 A o 16 A máximo</text>
+  <text x="480" y="296" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Norma: ITC-BT-22 §1 · IEC 60898-1</text>
+
+  <!-- Fix 5 -->
+  <rect x="460" y="300" width="415" height="50" rx="2" fill="#052e16"/>
+  <text x="480" y="316" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#4ade80">→ Instalar caja de derivación con tapa registrable</text>
+  <text x="480" y="332" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0">Terminales de conexión certificados · empalmes fijados</text>
+  <text x="480" y="346" font-family="Arial,sans-serif" font-size="9" fill="#64748b">Norma: ITC-BT-20 §1 · acceso para mantenimiento</text>
+
+  <!-- Summary box -->
+  <rect x="25" y="362" width="850" height="82" rx="6" fill="#0a1628" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="454" y="386" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Criterio general — Siempre verificar después de corregir</text>
+  <text x="45" y="408" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">Cada corrección debe ir seguida de la verificación instrumental correspondiente: Ris, CPE, Zs, disparo diferencial.</text>
+  <text x="45" y="426" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Documentar en acta con instrumento, valor medido, límite normativo y firma. Sin acta la corrección no es válida.</text>
+  <text x="45" y="440" font-family="Arial,sans-serif" font-size="10" fill="#64748b">IEC 60364-6:2016 — verificaciones antes de puesta en servicio · ITC-BT-05 (certificados instalación)</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Errores instalaciones · ITC-BT-22/23/24/25 · IEC 60364-6</text>
+</svg>

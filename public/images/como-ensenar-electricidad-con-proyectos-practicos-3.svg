@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bgabp3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b2e"/>
+      <stop offset="50%" style="stop-color:#0c2a4a"/>
+      <stop offset="100%" style="stop-color:#0d1b2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" fill="url(#bgabp3)"/>
+  <rect width="900" height="480" fill="none" stroke="#1e3560" stroke-width="1" rx="4"/>
+  <rect x="0" y="0" width="8" height="480" fill="#2563eb" opacity="0.7" rx="2"/>
+
+  <text x="454" y="34" font-family="Arial,sans-serif" font-size="17" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Criterios para proyectos prácticos en FP Eléctrica</text>
+  <text x="454" y="52" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Selección y diseño de proyectos de taller · INDUCTECH TRAINING</text>
+  <line x1="25" y1="62" x2="875" y2="62" stroke="#1e3560" stroke-width="1"/>
+
+  <!-- Header row -->
+  <rect x="25" y="70" width="850" height="30" rx="4" fill="#1e3a8a"/>
+  <text x="155" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">Criterio de selección</text>
+  <text x="370" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">Proyecto tipo 1</text>
+  <text x="570" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">Proyecto tipo 2</text>
+  <text x="775" y="90" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#93c5fd" text-anchor="middle">Proyecto tipo 3</text>
+
+  <!-- Row project names -->
+  <rect x="25" y="100" width="850" height="26" rx="2" fill="#0a1628"/>
+  <text x="155" y="117" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">—</text>
+  <text x="370" y="117" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Vivienda unifamiliar</text>
+  <text x="570" y="117" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Local comercial</text>
+  <text x="775" y="117" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#60a5fa" text-anchor="middle">Motor trifásico</text>
+
+  <!-- Row normativa -->
+  <rect x="25" y="126" width="850" height="32" rx="2" fill="#0c1f3a"/>
+  <text x="155" y="141" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Normativa</text>
+  <text x="155" y="153" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">principal</text>
+  <text x="370" y="141" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">ITC-BT-25 / ITC-BT-10</text>
+  <text x="370" y="153" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">5.750 W básico / 9.200 W elevado</text>
+  <text x="570" y="141" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">ITC-BT-28 (grupo III)</text>
+  <text x="570" y="153" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Protección diferencial 30 mA</text>
+  <text x="775" y="141" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">ITC-BT-47 / IEC 60034</text>
+  <text x="775" y="153" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Arranque, inversión, maniobra</text>
+
+  <!-- Row nivel -->
+  <rect x="25" y="158" width="850" height="28" rx="2" fill="#081426"/>
+  <text x="155" y="177" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Ciclo / nivel</text>
+  <rect x="286" y="162" width="168" height="20" rx="10" fill="#14532d"/>
+  <text x="370" y="176" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">CFGM · 1er y 2º año</text>
+  <rect x="486" y="162" width="168" height="20" rx="10" fill="#14532d"/>
+  <text x="570" y="176" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">CFGM · 2º año</text>
+  <rect x="691" y="162" width="168" height="20" rx="10" fill="#14532d"/>
+  <text x="775" y="176" font-family="Arial,sans-serif" font-size="10" fill="#4ade80" text-anchor="middle">CFGS · Automatización</text>
+
+  <!-- Row horas -->
+  <rect x="25" y="186" width="850" height="28" rx="2" fill="#0c1f3a"/>
+  <text x="155" y="205" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Duración estimada</text>
+  <text x="370" y="205" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">16–20 horas</text>
+  <text x="570" y="205" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">12–16 horas</text>
+  <text x="775" y="205" font-family="Arial,sans-serif" font-size="12" font-weight="bold" fill="#fbbf24" text-anchor="middle">10–14 horas</text>
+
+  <!-- Row entregables -->
+  <rect x="25" y="214" width="850" height="48" rx="2" fill="#081426"/>
+  <text x="155" y="233" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Entregables</text>
+  <text x="155" y="249" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">(3 niveles)</text>
+  <text x="370" y="228" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Unifilar + memoria REBT</text>
+  <text x="370" y="244" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Montaje cuadro IGA+RCD+PIAs</text>
+  <text x="370" y="258" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Acta verificación IEC 60364-6</text>
+  <text x="570" y="228" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Previsión carga ITC-BT-10</text>
+  <text x="570" y="244" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Cuadro con diferencial 300 mA</text>
+  <text x="570" y="258" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Medida de aislamiento 1 MΩ</text>
+  <text x="775" y="228" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Esquema maniobra + potencia</text>
+  <text x="775" y="244" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Arrancador estrella-triángulo</text>
+  <text x="775" y="258" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Medición Icc en bornes motor</text>
+
+  <!-- Row verificacion -->
+  <rect x="25" y="262" width="850" height="48" rx="2" fill="#0c1f3a"/>
+  <text x="155" y="281" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Verificaciones</text>
+  <text x="155" y="297" font-family="Arial,sans-serif" font-size="10" fill="#64748b" text-anchor="middle">mínimas</text>
+  <text x="370" y="277" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Ris ≥ 0,5 MΩ · CPE ≤ 1 Ω</text>
+  <text x="370" y="293" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Bucle fallo · Disparo diferencial</text>
+  <text x="370" y="305" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">con 1×IΔn y 5×IΔn</text>
+  <text x="570" y="277" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Ris ≥ 1 MΩ · CPE ≤ 0,5 Ω</text>
+  <text x="570" y="293" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Bucle + selectividad RCD</text>
+  <text x="570" y="305" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">300 mA vs 30 mA</text>
+  <text x="775" y="277" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Icc_motor · secuencia fases</text>
+  <text x="775" y="293" font-family="Arial,sans-serif" font-size="10" fill="#e2e8f0" text-anchor="middle">Tiempo t estrella→triángulo</text>
+  <text x="775" y="305" font-family="Arial,sans-serif" font-size="9" fill="#64748b" text-anchor="middle">Protección térmica calibrada</text>
+
+  <!-- Error frecuente row -->
+  <rect x="25" y="310" width="850" height="30" rx="2" fill="#0a1628"/>
+  <text x="155" y="329" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Error docente típico</text>
+  <text x="370" y="329" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">No exigir medición — "con que funcione basta"</text>
+  <text x="687" y="329" font-family="Arial,sans-serif" font-size="10" fill="#f87171" text-anchor="middle">Omitir verificación de selectividad</text>
+
+  <!-- Summary box -->
+  <rect x="25" y="355" width="850" height="95" rx="6" fill="#0a1628" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="454" y="378" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="#f1f5f9" text-anchor="middle">Principio de evaluación técnica</text>
+  <text x="45" y="400" font-family="Arial,sans-serif" font-size="11" fill="#e2e8f0">El criterio de evaluación no es "funcionó" — es "midió, comparó con el límite normativo y firmó el acta".</text>
+  <text x="45" y="420" font-family="Arial,sans-serif" font-size="11" fill="#94a3b8">Un técnico que no sabe verificar no está cualificado para la puesta en servicio, aunque el circuito encienda la luz.</text>
+  <text x="45" y="440" font-family="Arial,sans-serif" font-size="10" fill="#64748b">Referencia: IEC 60364-6:2016 — tabla de ensayos mínimos para instalaciones de BT.</text>
+
+  <text x="450" y="468" font-family="Arial,sans-serif" font-size="9" fill="#4a6a8a" text-anchor="middle">INDUC TECH · Proyectos taller FP · IEC 60364-6 · ITC-BT-25/28/47</text>
+</svg>
