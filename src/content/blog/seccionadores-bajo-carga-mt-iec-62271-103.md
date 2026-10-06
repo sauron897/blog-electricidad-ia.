@@ -131,7 +131,7 @@ En una red en anillo, cerrar o abrir el bucle implica una diferencia de ángulo 
 **3. Posición funcional en la celda:**
 
 | Posición | Función | Capacidades obligatorias |
-|----------|---------|---------------------------|
+|----------|---------|--------------------------|
 | Línea / acometida | Seccionamiento de línea, corte de bucle | In, Ic (cable-charging), loop switching |
 | Protección de transformador | Seccionamiento + maniobra sobre transformador vacío | In, Ic, magnetizing current, fusibles coordinados |
 | Condensador / batería reactiva | Corte de banco de condensadores | In + capacitor switching certificado (§ 6.103.2) |
