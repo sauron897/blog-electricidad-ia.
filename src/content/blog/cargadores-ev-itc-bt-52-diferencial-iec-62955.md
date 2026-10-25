@@ -17,7 +17,7 @@ Este artículo desarrolla los criterios de selección de protección diferencial
 La norma IEC 61851-1 (transpuesta como UNE-EN 61851-1) clasifica la recarga en cuatro modos. Esta clasificación determina directamente la exigencia de protección diferencial:
 
 | Modo | Conexión | I máx. | Potencia | Control pilot |
-|------|----------|--------|----------|---------------|
+|------|----------|--------|----------|--------------|
 | 1 | Toma convencional sin protección específica | 16 A / 230 V AC | 3,7 kW mono | No |
 | 2 | Schuko con ICCPD (cable con caja de control) | 16 A / 230 V AC | 3,7 kW mono | En cable |
 | 3 | EVSE dedicado, conector tipo 1 o tipo 2 | 32 A / 230 V; 32 A / 400 V | 7,4 kW / 22 kW | En EVSE |
